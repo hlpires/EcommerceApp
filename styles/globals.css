@@ -126,3 +126,9 @@
  
  justify-content: center;
 }
+.produtos{
+  
+  display: flex;
+  justify-content: center;
+  
+}

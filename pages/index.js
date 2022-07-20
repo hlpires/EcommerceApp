@@ -1,6 +1,6 @@
 import React from 'react'
 import {client} from '../lib/client'
-import {Header,FooterBanner,Banner} from '../components/index'
+import {Header,FooterBanner,Banner,Produtos} from '../components/index'
 
 
 
@@ -9,6 +9,7 @@ const Home = () => {
     <div>
       <Header/>
       <Banner/>
+      <Produtos/>
     </div>
   )
 
