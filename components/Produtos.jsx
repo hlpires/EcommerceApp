@@ -5,10 +5,10 @@ const Produtos = () => {
     <div className ='produtos'>
       <div className= 'position'>
         <div className = 'produtosBox'>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div className ='produtosItem'></div>
+          <div className ='produtosItem'> </div>
+          <div className ='produtosItem'></div>
+          <div className ='produtosItem'></div>
 
         </div>
       </div>
