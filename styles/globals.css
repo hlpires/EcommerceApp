@@ -169,3 +169,21 @@
   background-color: black;
   float: left;
 }
+.art{
+  display: flex;
+  justify-content: center;
+}
+.positionart{
+  width: 1500px;
+  height: 400px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+}
+.artimg{
+  width: 88%;
+  height: 90%;
+  align-self: center;
+  background-image:url(../img/art.png);
+  background-color: green;
+}
