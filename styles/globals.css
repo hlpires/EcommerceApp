@@ -146,5 +146,26 @@
   margin-left: 4%;
   width: 20%;
   border-radius: 05%;
+}
+.produtosdois{
   
+    display: flex;
+   
+   justify-content: center;
+  
+}
+.produtosdoisbox{
+  width: 90%;
+  height: 80%;
+  align-self: center;
+  background-color: red;
+  display: block;
+}
+.produtosdoisItem{
+  width: 22%;
+  height: 30%;
+  margin-top: 5%;
+  margin-left:2.5%;
+  background-color: black;
+  float: left;
 }

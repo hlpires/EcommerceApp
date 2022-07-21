@@ -7,3 +7,5 @@ export {default as Layout} from './Cart'
 export {default as Navbar} from './Cart'
 export {default as Product} from './Cart'
 export {default as Produtos} from './Produtos'
+export {default as Produtosdois} from './Produtosdois'
+
