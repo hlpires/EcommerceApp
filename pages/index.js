@@ -4,24 +4,25 @@ import {Header,FooterBanner,Banner,Produtos,Produtosdois,Art} from '../component
 
 
 
-const Home = () => {
-  return (
+const Home = () => (
     <div>
       <Header/>
       <Banner/>
       <Produtos/>
       <Produtosdois/>
       <Art/>
-    </div>
-  )
+    </div> 
+);
 
-  //export const getServerSideProps = async =>{
-  //  const query = '*[_type == "product"]';
- //   const products = await client.fetch(query);
- // }
- // return{
- //   props: {products,bannerData}
- // }
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "Produtos"]';
+  const products = await client.fetch(query);
+
+  
+  return {
+    props: { products}
+ }
 }
 
 export default Home
