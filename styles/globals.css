@@ -175,6 +175,7 @@ h2{
   height: 80%;
   align-self: center;
   display: block;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .produtosItem{
   border: 2px solid #ededed;
@@ -190,10 +191,59 @@ h2{
   height: 50%;
 
 }
-.produtosdois{
+h3{
+  font-size: 30px;
   
+  font-weight:bolder;
+  width: 296px;
+  border: 2px solid green;
+}
+h4{
+  font-size: 20px;
+  
+  font-weight:bolder;
+  width: 296px;
+  border: 2px solid green;
+}
+.multi{
+  width: 100%;
+  height: 15%;
+  background-color: red;
+  display: block;
+}
+.multiItem{
+width: 100%;
+background-color: green;
+height: 33%;
+border: 1px solid yellow;
+}
+.multiImg{
+width: 10%;
+height: 100%;
+background-color: black;
+float: left;
+background-size: 100%;
+}
+#multiImg1{
+  background-image: url(../img/fretemini.png);
+ 
+}
+#multiImg2{
+  background-image: url(../img/promomini.png);
+}
+#multiImg3{
+  background-image: url(../img/heartmini.png);
+}
+p{
+  margin-left: 04%;
+  float: left;
+}
+h5{
+  font-size: 30px;
+  text-align: center;
+}
+.produtosdois{
     display: flex;
-   
    justify-content: center;
   
 }
