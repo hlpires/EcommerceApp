@@ -170,7 +170,7 @@ h2{
   
 }
 .produtosBox{
-  background-color: orange;
+  
   width: 100%;
   height: 80%;
   align-self: center;
@@ -186,7 +186,7 @@ h2{
   border-radius: 05%;
 }
 .produtosImg{
-  background-color: red;
+  
   width: 100%;
   height: 50%;
 
@@ -196,31 +196,31 @@ h3{
   
   font-weight:bolder;
   width: 296px;
-  border: 2px solid green;
+  
 }
 h4{
   font-size: 20px;
   
   font-weight:bolder;
   width: 296px;
-  border: 2px solid green;
+  
 }
 .multi{
   width: 100%;
   height: 15%;
-  background-color: red;
+  
   display: block;
 }
 .multiItem{
 width: 100%;
-background-color: green;
+
 height: 33%;
-border: 1px solid yellow;
+
 }
 .multiImg{
 width: 10%;
 height: 100%;
-background-color: black;
+
 float: left;
 background-size: 100%;
 }
@@ -248,7 +248,7 @@ h5{
   
 }
 .produtosdoisbox{
-  width: 90%;
+  width: 100%;
   height: 80%;
   align-self: center;
   background-color: red;
@@ -256,8 +256,9 @@ h5{
 }
 .produtosdoisItem{
   width: 22%;
-  height: 30%;
-  margin-top: 5%;
+  margin-top: 4.5%;
+  height: 33%;
+  
   margin-left:2.5%;
   background-color: black;
   float: left;
