@@ -4,8 +4,8 @@ import {Header,FooterBanner,Banner,Produtos,Produtosdois,Art} from '../component
 
 
 
-const Home = () => (
-    <div>
+const Home = ({products}) => (
+    <div>     
       <Header/>
       <Banner/>
       <Produtos/>
@@ -16,12 +16,12 @@ const Home = () => (
 
 
 export const getServerSideProps = async () => {
-  const query = '*[_type == "Produtos"]';
+  const query = '*[_type == "produtos"]';
   const products = await client.fetch(query);
 
   
   return {
-    props: { products}
+    props: {products}
  }
 }
 
