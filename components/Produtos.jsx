@@ -19,6 +19,7 @@ const Produtos = ({produtos}) => {
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p> Mussum Ipsum, cacilds vidis litro </p></div>
             </div>
             <h5>R${produtos[0].preco}</h5>
+            <div className = 'comprarButton'>Comprar</div>
           </div>
           <div className ='produtosItem'>
             <img className = 'produtosImg' src={urlFor(produtos[0].imagem?.[0])} alt="" />
@@ -30,6 +31,7 @@ const Produtos = ({produtos}) => {
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p> Mussum Ipsum, cacilds vidis litro </p></div>
             </div>
             <h5>R${produtos[0].preco}</h5>
+            <div className = 'comprarButton'>Comprar</div>
           </div>
           <div className ='produtosItem'>
             <img className = 'produtosImg' src={urlFor(produtos[0].imagem?.[0])} alt="" />
@@ -41,6 +43,7 @@ const Produtos = ({produtos}) => {
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p> Mussum Ipsum, cacilds vidis litro </p></div>
             </div>
             <h5>R${produtos[0].preco}</h5>
+            <div className = 'comprarButton'>Comprar</div>
           </div>
           <div className ='produtosItem'>
             <img className = 'produtosImg' src={urlFor(produtos[0].imagem?.[0])} alt="" />
@@ -52,6 +55,7 @@ const Produtos = ({produtos}) => {
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p> Mussum Ipsum, cacilds vidis litro </p></div>
             </div>
             <h5>R${produtos[0].preco}</h5>
+            <div className = 'comprarButton'>Comprar</div>
           </div>
 
         </div>
