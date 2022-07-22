@@ -172,7 +172,7 @@ h2{
 .produtosBox{
   
   width: 100%;
-  height: 80%;
+  height: 100%;
   align-self: center;
   display: block;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -188,27 +188,33 @@ h2{
 .produtosImg{
   
   width: 100%;
-  height: 50%;
+  height: 40%;
 
 }
 h3{
   font-size: 30px;
-  
+  width: 240px;
+  margin-left: 30px;
+  border: 2px solid red;
   font-weight:bolder;
-  width: 296px;
+  text-align: center;
+
   
 }
 h4{
   font-size: 20px;
-  
+  text-align: center;
   font-weight:bolder;
-  width: 296px;
+  width: 240px;
+  margin-left: 30px;
+  
   
 }
 .multi{
   width: 100%;
   height: 15%;
-  
+  width: 280px;
+  margin-left: 20px;
   display: block;
 }
 .multiItem{
@@ -220,7 +226,7 @@ height: 33%;
 .multiImg{
 width: 10%;
 height: 100%;
-
+background-repeat: no-repeat;
 float: left;
 background-size: 100%;
 }
