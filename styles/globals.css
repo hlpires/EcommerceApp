@@ -306,3 +306,23 @@ h5{
   background-image:url(../img/art.png);
   background-color: green;
 }
+.detalhes{
+  display: flex;
+  justify-content: center;
+}
+.positionDetalhes{
+width: 1500px;
+height: 800px;
+background-color: red;
+float: left;
+}
+.detalhesBox{
+  border: 2px solid red;
+  width: 100%;
+  height: 100%;
+}
+.detalhesImg{
+  width: 100vw;
+  height: 50vh;
+  background-color: red;
+}
