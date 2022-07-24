@@ -8,8 +8,10 @@ const detalhesProdutos = () => {
       <div className = 'detalhes'>
       <div className = 'positionDetalhes'>
         <div className = 'detalhesBox'>
-            <div className = 'datalhesImg'></div>
-            <div className= 'detalhesText'></div>
+          <div className='detalhesImg'></div>
+          <div className='detalhesText'></div>
+            
+            
         </div>
       </div>
       </div>
