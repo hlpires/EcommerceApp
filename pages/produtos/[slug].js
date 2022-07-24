@@ -20,8 +20,8 @@ const detalhesProdutos = (produtos) => {
             <img className = 'detalhesImgSize' src = {urlFor(produtos.produtos[0].imagem?.[0])}></img>
           </div>
           <div className='detalhesText'>
-            <div className = 'detalhesTextTittle'></div>
-            <div className = 'detalhesTextDetails'></div>
+            <div className = 'detalhesTextTittle'>{produtos.produtos[0].nome}</div>
+            <div className = 'detalhesTextDetails'>{produtos.produtos[0].detalhes}</div>
             <div className = 'detalhesTextMulti'>
 
             </div>
