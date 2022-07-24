@@ -364,5 +364,32 @@ float: left;
   height: 10%;
   margin-left: 20%;
   margin-top:20%;
-  float: left;
+  
+}  
+
+.detalhesTextDetails{
+  width: 60%;
+  background-color: green;
+  height: 30%;
+  margin-left: 20%;
+  margin-top:10%;
+  
+}
+
+
+.detalhesTextMulti{
+  width: 60%;
+  background-color: yellow;
+  height: 10%;
+  margin-left: 20%;
+  margin-top:20%;
+}
+
+
+.detalhesTextComprar{
+  width: 60%;
+  background-color: yellow;
+  height: 10%;
+  margin-left: 20%;
+  margin-top:20%;
 }
