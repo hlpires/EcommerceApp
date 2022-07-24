@@ -313,16 +313,20 @@ h5{
 .positionDetalhes{
 width: 1500px;
 height: 800px;
-background-color: red;
+
 float: left;
 }
 .detalhesBox{
-  border: 2px solid red;
+  border: 2px solid black;
   width: 100%;
   height: 100%;
+  display: block;
 }
 .detalhesImg{
-  width: 100vw;
-  height: 50vh;
+  border: 2px solid black;
+  width: 50px;
+  height: 50px;
   background-color: red;
+  float: left;
 }
+
