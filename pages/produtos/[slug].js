@@ -12,9 +12,14 @@ const detalhesProdutos = () => {
             <div className = 'detalhesImgTittle'></div>
             <img className = 'detalhesImgSize'></img>
           </div>
-          <div className='detalhesText'></div>
-            
-            
+          <div className='detalhesText'>
+            <div className = 'detalhesTextTittle'></div>
+            <div className = 'detalhesTextDetails'></div>
+            <div className = 'detalhesTextMulti'>
+
+            </div>
+            <div className = 'detalhesTextComprar'></div>
+          </div>
         </div>
       </div>
       </div>

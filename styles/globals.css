@@ -339,6 +339,7 @@ float: left;
   height: 100%;
   width: 50%;
   float: left;
+  display: block;
 }
 .detalhesImgSize{
   width: 60%;
@@ -357,3 +358,11 @@ float: left;
   float: left;
 }
 
+.detalhesTextTittle{
+  width: 60%;
+  background-color: yellow;
+  height: 10%;
+  margin-left: 20%;
+  margin-top:20%;
+  float: left;
+}
