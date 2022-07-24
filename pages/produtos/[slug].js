@@ -25,7 +25,7 @@ const detalhesProdutos = (produtos) => {
             <div className = 'detalhesTextMulti'>
 
             </div>
-            <div className = 'detalhesTextComprar'></div>
+            <div className = 'detalhesTextComprar'>Comprar</div>
           </div>
         </div>
       </div>
