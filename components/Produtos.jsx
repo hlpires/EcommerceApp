@@ -26,7 +26,7 @@ const Produtos = ({produtos}) => {
 
           
           <div className ='produtosItem'>
-            <img className = 'produtosImg' src={urlFor(produtos[0].imagem?.[0])} alt="" />
+            <img className = 'produtosImg' src={urlFor(produtos[1].imagem?.[0])} alt="" />
             <h3>{produtos[0].nome}</h3>
             <h4>{produtos[0].detalhes}</h4>
             <div className ='multi'>
@@ -35,7 +35,7 @@ const Produtos = ({produtos}) => {
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p> Garantia de 1 ano</p></div>
             </div>
             <h5>R${produtos[0].preco}</h5>
-            <div className = 'comprarButton'>Comprar</div>
+            <Link href ={`/produtos/${produtos[1].slug.current}`}><div className = 'comprarButton'>Comprar</div></Link>
           </div>
           <div className ='produtosItem'>
             <img className = 'produtosImg' src={urlFor(produtos[0].imagem?.[0])} alt="" />
