@@ -1,15 +1,21 @@
 import React from 'react'
 import {Header} from '../../components/index'
-const detalhesProdutos = () => {
+import {client} from '../../lib/client'
+
+
+
+const detalhesProdutos = (produtos) => {
   return (
       
     <div>
         <Header/>
+        
       <div className = 'detalhes'>
+      {console.log(produtos)}
       <div className = 'positionDetalhes'>
         <div className = 'detalhesBox'>
           <div className='detalhesImg'>
-            <div className = 'detalhesImgTittle'></div>
+            <div className = 'detalhesImgTittle'>{produtos.produtos[0].nome}</div>
             <img className = 'detalhesImgSize'></img>
           </div>
           <div className='detalhesText'>
@@ -25,6 +31,17 @@ const detalhesProdutos = () => {
       </div>
     </div>
   )
+}
+
+
+export const getServerSideProps = async () => {
+  const query = '*[_type == "produtos"]';
+  const produtos = await client.fetch(query);
+
+  
+  return {
+    props: {produtos}
+ }
 }
 
 export default detalhesProdutos
