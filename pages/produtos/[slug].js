@@ -8,7 +8,10 @@ const detalhesProdutos = () => {
       <div className = 'detalhes'>
       <div className = 'positionDetalhes'>
         <div className = 'detalhesBox'>
-          <div className='detalhesImg'></div>
+          <div className='detalhesImg'>
+            <div className = 'detalhesImgTittle'></div>
+            <img className = 'detalhesImgSize'></img>
+          </div>
           <div className='detalhesText'></div>
             
             
