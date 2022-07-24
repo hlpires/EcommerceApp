@@ -1,6 +1,7 @@
 import React from 'react'
 import {Header} from '../../components/index'
 import {client} from '../../lib/client'
+import {urlFor} from '../../lib/client'
 
 
 
@@ -16,7 +17,7 @@ const detalhesProdutos = (produtos) => {
         <div className = 'detalhesBox'>
           <div className='detalhesImg'>
             <div className = 'detalhesImgTittle'>{produtos.produtos[0].nome}</div>
-            <img className = 'detalhesImgSize'></img>
+            <img className = 'detalhesImgSize' src = {urlFor(produtos.produtos[0].imagem?.[0])}></img>
           </div>
           <div className='detalhesText'>
             <div className = 'detalhesTextTittle'></div>
