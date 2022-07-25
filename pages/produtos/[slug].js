@@ -10,14 +10,14 @@ const detalhesProdutos = (produtos) => {
 
   const router =  useRouter()
   const {
-    query:{set}
+    query:{value}
   } = router
 
   const props = {
-    set
+    value
   }
 
-  console.log(set)
+  console.log(value);
 
 
 

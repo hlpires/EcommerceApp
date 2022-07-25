@@ -4,17 +4,18 @@ import Link from 'next/link'
 import Router from 'next/router'
 
 
-const Produtos = ({produtos,set}) => {
+const Produtos = ({produtos}) => {
 
 
 
-  var set;
+ 
 
 
-  function sendProps(){
+  function sendProps(value){
     Router.push({
-      pathname: "../pages/produtos/[slug]",
-      query: { set }
+      
+      pathname: "/produtos/[slug]",
+      query: { value,slug:'slug'}
     },
     )};
      
@@ -36,7 +37,7 @@ const Produtos = ({produtos,set}) => {
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p> Garantia de 1 ano </p></div>
             </div>
             <h5>R${produtos[0].preco}</h5>
-            <Link href ={`/produtos/${produtos[0].slug.current}`}><div className = 'comprarButton' onClick = {'sendProps'}>Comprar</div></Link>
+            <Link href ={`/produtos/${produtos[0].slug.current}`}><div className = 'comprarButton' onClick = {() => sendProps('1')}>Comprar</div></Link>
             
           </div>
         
