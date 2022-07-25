@@ -6,14 +6,14 @@ const produtosdois = ({produtos}) => {
     <div className ='produtosdois'>
         <div className ='position'>
             <div className ='produtosdoisbox'>
-                <div className = 'produtosdoisItem'> <img className='produtosDoisImg' src={urlFor(produtos[0].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[0].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[0].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[0].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[0].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[0].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[0].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[0].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem'> <img className='produtosDoisImg' src={urlFor(produtos[2].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[2].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[2].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[2].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[2].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[2].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[2].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos[2].imagem?.[0])} alt="" /></div>
             </div>
         </div>
     </div>
