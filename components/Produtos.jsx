@@ -28,15 +28,15 @@ const Produtos = ({produtos}) => {
         <div className = 'produtosBox'>
           
             <div className ='produtosItem'>
-            <img className = 'produtosImg' src={urlFor(produtos[3].imagem?.[0])} alt="" />
-            <h3>{produtos[3].nome}</h3>
-            <h4>{produtos[3].detalhes}</h4>
+            <img className = 'produtosImg' src={urlFor(produtos[7].imagem?.[0])} alt="" />
+            <h3>{produtos[7].nome}</h3>
+            <h4>{produtos[7].detalhes}</h4>
             <div className ='multi'>
               <div className = 'multiItem'> <div id='multiImg1' className ='multiImg' alt="" /> <p> Frete Grátis </p></div>
               <div className = 'multiItem'> <div id='multiImg2' className ='multiImg' alt="" /> <p> Pagamento em até 24x  </p></div>
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p> Garantia de 1 ano </p></div>
             </div>
-            <h5>R${produtos[3].preco}</h5>
+            <h5>R${produtos[7].preco}</h5>
             <div className = 'comprarButton' onClick = {() => sendProps('0')}>Comprar</div>
             
           </div>
@@ -56,27 +56,27 @@ const Produtos = ({produtos}) => {
             <div className = 'comprarButton' onClick = {() => sendProps('1')}>Comprar</div>
           </div>
           <div className ='produtosItem'>
-            <img className = 'produtosImg' src={urlFor(produtos[0].imagem?.[0])} alt="" />
-            <h3>{produtos[0].nome}</h3>
-            <h4>{produtos[0].detalhes}</h4>
+            <img className = 'produtosImg' src={urlFor(produtos[10].imagem?.[0])} alt="" />
+            <h3>{produtos[10].nome}</h3>
+            <h4>{produtos[10].detalhes}</h4>
             <div className ='multi'>
               <div className = 'multiItem'> <div id='multiImg1' className ='multiImg' alt="" /> <p>  Frete Grátis </p></div>
               <div className = 'multiItem'> <div id='multiImg2' className ='multiImg' alt="" /> <p> Pagamento em até 24x </p></div>
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p>  Garantia de 1 ano </p></div>
             </div>
-            <h5>R${produtos[0].preco}</h5>
+            <h5>R${produtos[10].preco}</h5>
             <div className = 'comprarButton'>Comprar</div>
           </div>
           <div className ='produtosItem'>
-            <img className = 'produtosImg' src={urlFor(produtos[4].imagem?.[0])} alt="" />
-            <h3>{produtos[4].nome}</h3>
-            <h4>{produtos[4].detalhes}</h4>
+            <img className = 'produtosImg' src={urlFor(produtos[8].imagem?.[0])} alt="" />
+            <h3>{produtos[8].nome}</h3>
+            <h4>{produtos[8].detalhes}</h4>
             <div className ='multi'>
               <div className = 'multiItem'> <div id='multiImg1' className ='multiImg' alt="" /> <p>  Frete Grátis</p></div>
               <div className = 'multiItem'> <div id='multiImg2' className ='multiImg' alt="" /> <p> Pagamento em até 24x</p></div>
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p>  Garantia de 1 ano</p></div>
             </div>
-            <h5>R${produtos[4].preco}</h5>
+            <h5>R${produtos[8].preco}</h5>
             <div className = 'comprarButton'>Comprar</div>
           </div>
 
