@@ -41,8 +41,10 @@ const detalhesProdutos = (produtos) => {
           <div className='detalhesText'>
             <div className = 'detalhesTextTittle'>{produtos.produtos[set].nome}</div>
             <div className = 'detalhesTextDetails'>{produtos.produtos[set].detalhes}</div>
-            <div className = 'detalhesTextMulti'>
-
+            <div className ='multiD'>
+              <div className = 'multiItem'> <div id='multiImg1' className ='multiImg' alt="" /> <p>  Frete Grátis </p></div>
+              <div className = 'multiItem'> <div id='multiImg2' className ='multiImg' alt="" /> <p> Pagamento em até 24x </p></div>
+              <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p>  Garantia de 1 ano </p></div>
             </div>
             <div className = 'detalhesTextComprar'>Comprar</div>
           </div>
