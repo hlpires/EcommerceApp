@@ -13,11 +13,12 @@ const detalhesProdutos = (produtos) => {
     query:{value}
   } = router
 
-  const props = {
-    value
-  }
+  const set = parseInt(value)
+  console.log(set,1)
+  console.log(set,1)
+  console.log(set,1)
 
-  console.log(value);
+
 
 
 
@@ -35,7 +36,7 @@ const detalhesProdutos = (produtos) => {
         <div className = 'detalhesBox'>
           <div className='detalhesImg'>
             <div className = 'detalhesImgTittle' onClick = {''}>{produtos.produtos[0].nome}</div>
-            <img className = 'detalhesImgSize' src = {urlFor(produtos.produtos[0].imagem?.[0])}></img>
+            <img className = 'detalhesImgSize' src = {urlFor(produtos.produtos[set].imagem?.[0])}></img>
           </div>
           <div className='detalhesText'>
             <div className = 'detalhesTextTittle'>{produtos.produtos[0].nome}</div>
