@@ -14,7 +14,7 @@ const Banner = ({produtos}) => {
         <div className = 'position'>
             <div className = 'bannerBox'>
                 <div className = 'bannerImgBox'>
-                  <img className='imagemPrincipal' src={urlFor(produtos[0].imagem?.[0])} alt="" />
+                  <img className='imagemPrincipal' src={urlFor(produtos[2].imagem?.[0])} alt="" />
                   <h1>{produtos[0].nome}</h1>
                   <h2>{produtos[0].detalhes}</h2>
                 </div>

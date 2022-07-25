@@ -35,12 +35,12 @@ const detalhesProdutos = (produtos) => {
       <div className = 'positionDetalhes'>
         <div className = 'detalhesBox'>
           <div className='detalhesImg'>
-            <div className = 'detalhesImgTittle' onClick = {''}>{produtos.produtos[0].nome}</div>
+            <div className = 'detalhesImgTittle' >{produtos.produtos[set].nome}</div>
             <img className = 'detalhesImgSize' src = {urlFor(produtos.produtos[set].imagem?.[0])}></img>
           </div>
           <div className='detalhesText'>
-            <div className = 'detalhesTextTittle'>{produtos.produtos[0].nome}</div>
-            <div className = 'detalhesTextDetails'>{produtos.produtos[0].detalhes}</div>
+            <div className = 'detalhesTextTittle'>{produtos.produtos[set].nome}</div>
+            <div className = 'detalhesTextDetails'>{produtos.produtos[set].detalhes}</div>
             <div className = 'detalhesTextMulti'>
 
             </div>

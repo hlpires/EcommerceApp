@@ -28,7 +28,7 @@ const Produtos = ({produtos}) => {
         <div className = 'produtosBox'>
           
             <div className ='produtosItem'>
-            <img className = 'produtosImg' src={urlFor(produtos[0].imagem?.[0])} alt="" />
+            <img className = 'produtosImg' src={urlFor(produtos[4].imagem?.[0])} alt="" />
             <h3>{produtos[0].nome}</h3>
             <h4>{produtos[0].detalhes}</h4>
             <div className ='multi'>
