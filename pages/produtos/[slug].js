@@ -1,5 +1,5 @@
 import React from 'react'
-import {Header} from '../../components/index'
+import {Header, Product} from '../../components/index'
 import {client} from '../../lib/client'
 import {urlFor} from '../../lib/client'
 import {useRouter} from 'next/router'
@@ -8,7 +8,7 @@ import {useStateContext} from '../../context/StateContext'
 
 const detalhesProdutos = (produtos) => {
 
-  const { decQty,incQty,qty} = useStateContext(); 
+  const { decQty,incQty,qty,onAdd} = useStateContext(); 
 
   const router =  useRouter()
   const {
@@ -48,6 +48,10 @@ const detalhesProdutos = (produtos) => {
               <div className = 'multiItem'> <div id='multiImg2' className ='multiImg' alt="" /> <p> Pagamento em até 24x </p></div>
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p>  Garantia de 1 ano </p></div>
             </div>
+
+            <div className = 'detalhesTextComprar'>Comprar</div>
+            <div className = 'detalhesTextComprar' onClick = {() =>onAdd (produtos[set], qty)}>Carrinho</div>
+
             <div className ='quantidadeComprarBox'>
             <div className = 'quantidade'>
               <p className = 'quantidadeText'>Quantidade</p>
@@ -56,7 +60,7 @@ const detalhesProdutos = (produtos) => {
               <div className = 'quantidadeItem' onClick = {incQty}>+</div>
 
             </div>
-            <div className = 'detalhesTextComprar'>Comprar</div>
+            
             
             </div>
           </div>

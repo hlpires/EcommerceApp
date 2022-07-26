@@ -13,8 +13,9 @@ const Produtos = ({produtos}) => {
 
   function sendProps(value){
     Router.push({
-      
+      pathname: "/context/StateContext",
       pathname: "/produtos/[slug]",
+      
       query: { value,slug:'slug'}
     },
     )};
