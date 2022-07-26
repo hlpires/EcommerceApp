@@ -3,10 +3,12 @@ import {Header} from '../../components/index'
 import {client} from '../../lib/client'
 import {urlFor} from '../../lib/client'
 import {useRouter} from 'next/router'
-
+import {useStateContext} from '../../context/StateContext'
 
 
 const detalhesProdutos = (produtos) => {
+
+  const { decQty,incQty,qty} = useStateContext(); 
 
   const router =  useRouter()
   const {
