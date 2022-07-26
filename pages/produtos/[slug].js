@@ -48,7 +48,17 @@ const detalhesProdutos = (produtos) => {
               <div className = 'multiItem'> <div id='multiImg2' className ='multiImg' alt="" /> <p> Pagamento em até 24x </p></div>
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p>  Garantia de 1 ano </p></div>
             </div>
+            <div className ='quantidadeComprarBox'>
+            <div className = 'quantidade'>
+              <p className = 'quantidadeText'>Quantidade</p>
+              <div className = 'quantidadeItem'>-</div>
+              <div className = 'quantidadeItem'><span className = 'count'>0</span></div>
+              <div className = 'quantidadeItem'>+</div>
+
+            </div>
             <div className = 'detalhesTextComprar'>Comprar</div>
+            
+            </div>
           </div>
         </div>
       </div>

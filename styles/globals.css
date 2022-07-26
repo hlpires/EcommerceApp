@@ -392,17 +392,20 @@ float: left;
 .detalhesTextComprar{
   width: 40%;
   background-color: yellow;
-  height: 10%;
-  margin-top: 2%;
-  margin-left: 30%;
+  height: 80%;
+  margin-top: 1%;
+  margin-left: 5%;
   cursor: pointer;
   text-align: center;
   background-color: #2189ff;
   color: white;
   text-align: center;
   font-size: 25px;
+  justify-content: center;
+  display: flex;
   font-weight: bolder;
   cursor: pointer;
+  float: left;
 }
 
 .multiD{
@@ -415,4 +418,52 @@ float: left;
   font-weight: bolder;
   display: block;
   
+}
+
+.quantidadeComprarBox{
+  width: 80%;
+  margin-top: 3%;
+ 
+  height: 10%;
+  margin-left: 10%;
+  display: block;
+}
+.quantidade{
+  margin-top: 1%;
+  width: 50%;
+ 
+  height: 80%;
+  float: left;
+  display: flex;
+  
+}
+.quantidadeText{
+font-weight: bolder;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+width: 40%;
+
+margin-left: -01%;
+align-self: center;
+font-size: 18px;
+
+
+}
+.count{
+  
+ 
+  
+}
+.quantidadeItem{
+  float: left;
+  margin-top: 2%;
+  height: 90%;
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  font-size: 23px;
+  width: 20%;
+  border:1px solid black;
+  display: flex;
+  justify-content: center;
+
 }
