@@ -37,7 +37,7 @@ const Produtos = ({produtos}) => {
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p> Garantia de 1 ano </p></div>
             </div>
             <h5>R${produtos[7].preco}</h5>
-            <div className = 'comprarButton' onClick = {() => sendProps('0')}>Comprar</div>
+            <div className = 'comprarButton' onClick = {() => sendProps('7')}>Comprar</div>
             
           </div>
         
@@ -65,7 +65,7 @@ const Produtos = ({produtos}) => {
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p>  Garantia de 1 ano </p></div>
             </div>
             <h5>R${produtos[10].preco}</h5>
-            <div className = 'comprarButton'>Comprar</div>
+            <div className = 'comprarButton' onClick = {() => sendProps('10')}>Comprar</div>
           </div>
           <div className ='produtosItem'>
             <img className = 'produtosImg' src={urlFor(produtos[8].imagem?.[0])} alt="" />
@@ -77,7 +77,7 @@ const Produtos = ({produtos}) => {
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p>  Garantia de 1 ano</p></div>
             </div>
             <h5>R${produtos[8].preco}</h5>
-            <div className = 'comprarButton'>Comprar</div>
+            <div className = 'comprarButton' onClick = {() => sendProps('8')}>Comprar </div>
           </div>
 
         </div>

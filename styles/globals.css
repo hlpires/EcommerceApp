@@ -318,21 +318,17 @@ float: left;
 }
 .detalhesBox{
   margin-top: 2%;
-  border: 2px solid black;
+  
   width: 100%;
   height: 100%;
   display: block;
 }
 .detalhesImg{
-  
   width: 50%;
   height: 100%;
- 
   float: left;
   display:inline-block;
   justify-content: center;
-  
- 
 }
 .detalhesText{
   border: 1px solid black;
@@ -367,7 +363,8 @@ float: left;
 }
 
 .detalhesTextTittle{
-  font-size: 40px;
+  margin-TOP: 5%;
+  font-size: 35px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   width: 80%;
   margin-left: 10%;
@@ -379,12 +376,12 @@ float: left;
 
 .detalhesTextDetails{
   margin-top: 4%;
-  font-size: 28px;
+  font-size: 22px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   width: 80%;
   margin-left: 10%;
-  
-  height: 38%;
+ 
+  height: 30%;
 
 }
 
@@ -396,10 +393,9 @@ float: left;
   width: 40%;
   background-color: yellow;
   height: 10%;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-left: 30%;
   cursor: pointer;
-
   text-align: center;
   background-color: #2189ff;
   color: white;
@@ -414,7 +410,7 @@ float: left;
   width: 80%;
   margin-left: 10%;
   height: 30%;
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bolder;
   display: block;
