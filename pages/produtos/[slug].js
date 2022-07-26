@@ -51,9 +51,9 @@ const detalhesProdutos = (produtos) => {
             <div className ='quantidadeComprarBox'>
             <div className = 'quantidade'>
               <p className = 'quantidadeText'>Quantidade</p>
-              <div className = 'quantidadeItem'>-</div>
-              <div className = 'quantidadeItem'><span className = 'count'>0</span></div>
-              <div className = 'quantidadeItem'>+</div>
+              <div className = 'quantidadeItem' onClick = {decQty}>-</div>
+              <div className = 'quantidadeItem'><span className = 'count'>{qty}</span></div>
+              <div className = 'quantidadeItem' onClick = {incQty}>+</div>
 
             </div>
             <div className = 'detalhesTextComprar'>Comprar</div>
