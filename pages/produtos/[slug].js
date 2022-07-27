@@ -101,11 +101,13 @@ const mudarStyle = {
               <div className = 'quantidadeItem' onClick = {incQty}>+</div>
 
             </div>
-            
-            
             </div>
           </div>
+                  <div className = 'cartBox'>
+
+                  </div>
         </div>
+
       </div>
       </div>
     </div>
