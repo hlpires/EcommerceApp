@@ -27,6 +27,7 @@ setQty((prevQty) => prevQty - 1);
 
 const buy = () =>{
 setPrice(produtos.produtos[set].preco * qty)
+
 }
 
  
@@ -40,28 +41,16 @@ setCart(data)
 }, [])
 
 
+useEffect(() => {
 
-//use effect que nao executa no load inicial
-
-const useDidMountEffect = (func, deps) => {
-  const didMount = useRef(false);
-
-  useEffect(() => {
-      if (didMount.current) func();
-      else didMount.current = true;
-  }, deps);
-}
-
-useDidMountEffect(() => {
-
-  setCart(price + produtosCart);
+  console.log(price)
   window.localStorage.setItem('cart',JSON.stringify(cart));
-  console.log(cart)
-  
-}, [buy]);
 
 
+}, [buy])
 
+
+console.log(cart)
 
 
 
