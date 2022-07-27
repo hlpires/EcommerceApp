@@ -33,8 +33,13 @@ setProdutosCart(produtos.produtos[set].nome + produtosCart );
 const [cart, setCart] = useState([]);
 
 useEffect(() => {
+const data = window.localStorage.getItem('cart')
+console.log(data)
+}, [])
+
+useEffect(() => {
     setCart(price + produtosCart);
-    console.log(cart);
+    
     window.localStorage.setItem('cart',JSON.stringify(cart));
 }, [buy]);
 
