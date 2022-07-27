@@ -10,7 +10,7 @@ import {useRouter} from 'next/router'
 const detalhesProdutos = (produtos) => {
 
 
-  
+
   
 
 const [qty, setQty] = useState(1);
@@ -26,36 +26,26 @@ setQty((prevQty) => prevQty - 1);
 }
 
 const buy = () =>{
-setPrice(produtos.produtos[set].preco * qty)
-
+//setPrice(produtos.produtos[set].preco * qty)
+//setProdutosCart(produtos.produtos[set].nome + produtosCart)
+setCart('1200')
 }
 
- 
-const [cart, setCart] = useState([]);
+
+
+const [cart, setCart] = useState();
+
 
 useEffect(() => {
-const data = window.localStorage.getItem('cart');
-setCart(data)
-
-
+  const data = window.localStorage.getItem('cart')
+  setCart(JSON.parse(data))
 }, [])
 
-
 useEffect(() => {
-
-  console.log(price)
   window.localStorage.setItem('cart',JSON.stringify(cart));
+  console.log(cart)
 
-
-}, [buy])
-
-
-console.log(cart)
-
-
-
-
-
+}, [cart])
 
 
 const router =  useRouter()
