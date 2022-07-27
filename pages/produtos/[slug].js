@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{createContext,useContext,useState,useEffect} from 'react';
 import {Header, Product} from '../../components/index'
 import {client} from '../../lib/client'
 import {urlFor} from '../../lib/client'
@@ -8,17 +8,41 @@ import {useStateContext} from '../../context/StateContext'
 
 const detalhesProdutos = (produtos) => {
 
-  const { decQty,incQty,qty,onAdd} = useStateContext(); 
+  const [qty, setQty] = useState(1);
+  const [price, setPrice] = useState(0);
+  const [produtosCart, setProdutosCart] = useState('');
+ 
+  
 
-  const router =  useRouter()
-  const {
-    query:{value}
-  } = router
+const incQty = () => { 
+setQty((prevQty) => prevQty + 1);
+}
+
+const decQty = () =>{  
+setQty((prevQty) => prevQty - 1);
+}
+
+const buy = () =>{
+setPrice(produtos.produtos[set].preco * qty);
+}
+
+const addProdutos = () =>{
+setProdutosCart(produtos.produtos[set].nome + produtosCart);
+
+}
+
+const cart = {
+  price,
+  produtosCart
+}
+
+
+
+const router =  useRouter()
+const {
+query:{value}} = router
 
   const set = parseInt(value)
-  console.log(set,1)
-  console.log(set,1)
-  console.log(set,1)
 
 
 
@@ -29,6 +53,7 @@ const detalhesProdutos = (produtos) => {
       
     <div>
         <Header/>
+        
         
         
       <div className = 'detalhes'>
@@ -49,8 +74,8 @@ const detalhesProdutos = (produtos) => {
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p>  Garantia de 1 ano </p></div>
             </div>
 
-            <div className = 'detalhesTextComprar'>Comprar</div>
-            <div className = 'detalhesTextComprar' onClick = {() =>onAdd (produtos[set], qty)}>Carrinho</div>
+            <div className = 'detalhesTextComprar' onClick = {buy}>Comprar</div>
+            <div className = 'detalhesTextComprar' onClick = {addProdutos}>Carrinho</div>
 
             <div className ='quantidadeComprarBox'>
             <div className = 'quantidade'>

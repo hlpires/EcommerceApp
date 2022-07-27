@@ -7,8 +7,7 @@ const Banner = ({produtos}) => {
   return (
     
     <div className = 'banner'>
-      {console.log(produtos)}
-      {console.log(produtos[0].imagem?.[0])}
+      
       
           
         <div className = 'position'>

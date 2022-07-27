@@ -7,7 +7,7 @@ const Header = ({ header }) => {
   return (
     <div>
       <div className = 'headerPosition'>
-        <div className = 'logo'></div>
+      <Link href="/"><div className = 'logo' ></div></Link>
         <div className = 'menu'>
           <div className ='menuitem1'></div>
           <div className ='menuitem2'></div>
