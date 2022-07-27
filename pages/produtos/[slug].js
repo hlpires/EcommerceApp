@@ -77,11 +77,12 @@ const mudarStyle = {
     
       <div className = 'positionDetalhes'>
         <div className = 'detalhesBox'>
+       
+          <div className='detalhesText'>
           <div className='detalhesImg'>
             <div className = 'detalhesImgTittle' >{produtos.produtos[set].nome}</div>
             <img className = 'detalhesImgSize' src = {urlFor(produtos.produtos[set].imagem?.[0])}></img>
           </div>
-          <div className='detalhesText'>
             <div className = 'detalhesTextTittle'>{produtos.produtos[set].nome}</div>
             <div className = 'detalhesTextDetails'>{produtos.produtos[set].detalhes}</div>
             <div className ='multiD'>
@@ -99,7 +100,6 @@ const mudarStyle = {
               <div className = 'quantidadeItem' onClick = {decQty}>-</div>
               <div className = 'quantidadeItem'><span className = 'count'>{qty}</span></div>
               <div className = 'quantidadeItem' onClick = {incQty}>+</div>
-              
 
             </div>
             
