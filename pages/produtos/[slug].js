@@ -82,7 +82,7 @@ const mudarStyle = {
             <div className = 'detalhesImgTittle' >{produtos.produtos[set].nome}</div>
             <img className = 'detalhesImgSize' src = {urlFor(produtos.produtos[set].imagem?.[0])}></img>
           </div>
-            <div className = 'detalhesTextTittle'>{produtos.produtos[set].nome}</div>
+            
             <div className = 'detalhesTextDetails'>{produtos.produtos[set].detalhes}</div>
             <div className ='multiD'>
               <div className = 'multiItem'> <div id='multiImg1' className ='multiImg' alt="" /> <p>  Frete Grátis </p></div>

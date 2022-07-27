@@ -324,37 +324,40 @@ float: left;
   display: block;
 }
 .detalhesImg{
+  
   width: 50%;
   height: 100%;
   float: left;
   display:inline-block;
   justify-content: center;
+  
 }
 .detalhesText{
+  
   border: 1px solid black;
   height: 100%;
-  
+ 
   margin-top:2%;
   width: 70%;
   float: left;
   display: block;
 }
 .detalhesImgSize{
-  width: 60%;
+  width: 100%;
   
   height: 60%;
-  margin-left: 20%;
+ 
   margin-top:0%;
   float: left;
-  border: 1px solid gray;
+  
   
 }
 .detalhesImgTittle{
   width: 60%;
 
-  height: 20%;
+  height: 10%;
   margin-left: 20%;
-  margin-top:10%;
+  margin-top: 10%;
   float: left;
   font-size:50px;
 
@@ -362,26 +365,16 @@ float: left;
   font-weight: bolder;
 }
 
-.detalhesTextTittle{
-  margin-TOP: 5%;
-  font-size: 35px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  width: 80%;
-  margin-left: 10%;
-  
-  height: 10%;
 
-  
-}  
 
 .detalhesTextDetails{
-  margin-top: 4%;
+  margin-top: 12%;
   font-size: 22px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  width: 80%;
-  margin-left: 10%;
- 
-  height: 22%;
+  width: 40%;
+  
+  float: left;
+  height: 20%;
 
 }
 
@@ -390,10 +383,10 @@ float: left;
 
 
 .detalhesTextComprar{
-  margin-left: 10%;
-  width: 30%;
+  margin-left: 1%;
+  width: 15%;
   background-color: yellow;
-  height: 8%;
+  height: 5%;
   margin-top: 1%;
   cursor: pointer;
   text-align: center;
@@ -410,29 +403,30 @@ float: left;
 
 .multiD{
   
-  width: 80%;
-  margin-left: 10%;
-  height: 30%;
+  width: 50%;
+  height: 20%;
   font-size: 20px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bolder;
   display: block;
-  
+  float: left;
 }
 
 .quantidadeComprarBox{
-  width: 100%;
-  margin-top: 10%;
+  width: 40%;
+  margin-top: 2%;
  
+ float: left;
   height: 10%;
-  margin-left: 10%;
+ 
   display: block;
 }
 .quantidade{
-  margin-top: 1%;
-  width: 50%;
+  margin-top: 0%;
+  margin-left: 5%;
+  width:80%;
  
-  height: 80%;
+  height: 50%;
   float: left;
   display: flex;
   
