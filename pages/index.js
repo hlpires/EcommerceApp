@@ -4,6 +4,7 @@ import {Header,FooterBanner,Banner,Produtos,Produtosdois,Art} from '../component
 
 
 
+
 const Home = ({produtos}) => (
     <div>
       <Header/>

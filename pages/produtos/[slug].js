@@ -3,17 +3,26 @@ import {Header, Product} from '../../components/index'
 import {client} from '../../lib/client'
 import {urlFor} from '../../lib/client'
 import {useRouter} from 'next/router'
-import {useStateContext} from '../../context/StateContext'
+
+
 
 
 const detalhesProdutos = (produtos) => {
+
+ 
+const [cart, setCart] = useState([]);
+
+
+    
+useEffect(() => {
+window.localStorage.setItem('cart',JSON.stringify(cart));
+},  [cart])
+
 
   const [qty, setQty] = useState(1);
   const [price, setPrice] = useState(0);
   const [produtosCart, setProdutosCart] = useState('');
  
-  
-
 const incQty = () => { 
 setQty((prevQty) => prevQty + 1);
 }
@@ -24,16 +33,15 @@ setQty((prevQty) => prevQty - 1);
 
 const buy = () =>{
 setPrice(produtos.produtos[set].preco * qty);
+setCart([price])
+console.log(cart)
+
+
 }
 
 const addProdutos = () =>{
 setProdutosCart(produtos.produtos[set].nome + produtosCart);
 
-}
-
-const cart = {
-  price,
-  produtosCart
 }
 
 
