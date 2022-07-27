@@ -1,4 +1,4 @@
-import React,{createContext,useContext,useState,useEffect} from 'react';
+import React,{createContext,useContext,useState,useEffect,useRef} from 'react';
 import {Header, Product} from '../../components/index'
 import {client} from '../../lib/client'
 import {urlFor} from '../../lib/client'
@@ -10,10 +10,12 @@ import {useRouter} from 'next/router'
 const detalhesProdutos = (produtos) => {
 
 
+  
+  
 
-  const [qty, setQty] = useState(1);
-  const [price, setPrice] = useState(0);
-  const [produtosCart, setProdutosCart] = useState('');
+const [qty, setQty] = useState(1);
+const [price, setPrice] = useState(0);
+const [produtosCart, setProdutosCart] = useState('');
  
 const incQty = () => { 
 setQty((prevQty) => prevQty + 1);
@@ -25,25 +27,38 @@ setQty((prevQty) => prevQty - 1);
 
 const buy = () =>{
 setPrice(produtos.produtos[set].preco * qty)
-setProdutosCart(produtos.produtos[set].nome + produtosCart );
-
 }
 
  
 const [cart, setCart] = useState([]);
 
 useEffect(() => {
-const data = window.localStorage.getItem('cart')
-console.log(data)
+const data = window.localStorage.getItem('cart');
+setCart(data)
+
+
 }, [])
 
-useEffect(() => {
-    setCart(price + produtosCart);
-    
-    window.localStorage.setItem('cart',JSON.stringify(cart));
+
+
+//use effect que nao executa no load inicial
+
+const useDidMountEffect = (func, deps) => {
+  const didMount = useRef(false);
+
+  useEffect(() => {
+      if (didMount.current) func();
+      else didMount.current = true;
+  }, deps);
+}
+
+useDidMountEffect(() => {
+
+  setCart(price + produtosCart);
+  window.localStorage.setItem('cart',JSON.stringify(cart));
+  console.log(cart)
+  
 }, [buy]);
-
-
 
 
 
