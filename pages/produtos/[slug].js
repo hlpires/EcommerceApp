@@ -9,14 +9,6 @@ import {useRouter} from 'next/router'
 
 const detalhesProdutos = (produtos) => {
 
- 
-const [cart, setCart] = useState([]);
-
-
-    
-useEffect(() => {
-window.localStorage.setItem('cart',JSON.stringify(cart));
-},  [cart])
 
 
   const [qty, setQty] = useState(1);
@@ -32,17 +24,28 @@ setQty((prevQty) => prevQty - 1);
 }
 
 const buy = () =>{
-setPrice(produtos.produtos[set].preco * qty);
-setCart([price])
-console.log(cart)
-
+setPrice(produtos.produtos[set].preco * qty)
+setProdutosCart(produtos.produtos[set].nome + produtosCart );
 
 }
 
-const addProdutos = () =>{
-setProdutosCart(produtos.produtos[set].nome + produtosCart);
+ 
+const [cart, setCart] = useState([]);
 
-}
+useEffect(() => {
+    setCart(price + produtosCart);
+    console.log(cart);
+    window.localStorage.setItem('cart',JSON.stringify(cart));
+}, [buy]);
+
+
+
+
+
+
+
+
+
 
 
 
@@ -83,14 +86,15 @@ query:{value}} = router
             </div>
 
             <div className = 'detalhesTextComprar' onClick = {buy}>Comprar</div>
-            <div className = 'detalhesTextComprar' onClick = {addProdutos}>Carrinho</div>
+            <div className = 'detalhesTextComprar' onClick = {'addProdutos'}>Carrinho</div>
 
             <div className ='quantidadeComprarBox'>
             <div className = 'quantidade'>
-              <p className = 'quantidadeText'>Quantidade</p>
+              <p className = 'quantidadeText'>{cart}</p>
               <div className = 'quantidadeItem' onClick = {decQty}>-</div>
               <div className = 'quantidadeItem'><span className = 'count'>{qty}</span></div>
               <div className = 'quantidadeItem' onClick = {incQty}>+</div>
+              
 
             </div>
             
