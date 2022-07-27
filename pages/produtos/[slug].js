@@ -77,7 +77,6 @@ const mudarStyle = {
     
       <div className = 'positionDetalhes'>
         <div className = 'detalhesBox'>
-       
           <div className='detalhesText'>
           <div className='detalhesImg'>
             <div className = 'detalhesImgTittle' >{produtos.produtos[set].nome}</div>

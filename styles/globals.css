@@ -332,10 +332,10 @@ float: left;
 }
 .detalhesText{
   border: 1px solid black;
-  height: 60%;
-  margin-left: 5%;
-  margin-top: 15.5%;
-  width: 40%;
+  height: 100%;
+  
+  margin-top:2%;
+  width: 70%;
   float: left;
   display: block;
 }
