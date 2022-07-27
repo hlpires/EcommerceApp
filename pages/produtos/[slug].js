@@ -25,18 +25,25 @@ setQty((prevQty) => prevQty - 1);
 
 const [cart, setCart] = useState();
 
+const [todosProdutos,setTodosProdutos] = useState();
+
+
 
 useEffect(() => {
   const data = window.localStorage.getItem('cart');
-  if (data !== null) setCart(JSON.parse(data))
+  if (data !== null)
+  setCart(JSON.parse(data))
+  setTodosProdutos(data)
 }, [])
 
 useEffect(() => {
   window.localStorage.setItem('cart',JSON.stringify(cart));
-  console.log(cart)
+  
 
 }, [cart])
 
+
+console.log(cart)
 
 const router =  useRouter()
 const {
@@ -46,11 +53,8 @@ const set = parseInt(value)
 
 const calcular = () => { 
 setPrice(produtos.produtos[set].preco * qty )
-setProdutosCart(produtos.produtos[set].nome + produtosCart)
+setProdutosCart(produtos.produtos[set].nome + todosProdutos)
 setEstado('flex')
-
-
-
 }
 
 const [estado, setEstado] = useState('none');
