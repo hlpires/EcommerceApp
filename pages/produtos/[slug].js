@@ -9,12 +9,8 @@ import {useRouter} from 'next/router'
 
 const detalhesProdutos = (produtos) => {
 
-
-
-  
-
 const [qty, setQty] = useState(1);
-const [price, setPrice] = useState(0);
+const [price, setPrice] = useState();
 const [produtosCart, setProdutosCart] = useState('');
  
 const incQty = () => { 
@@ -25,20 +21,14 @@ const decQty = () =>{
 setQty((prevQty) => prevQty - 1);
 }
 
-const buy = () =>{
-//setPrice(produtos.produtos[set].preco * qty)
-//setProdutosCart(produtos.produtos[set].nome + produtosCart)
-setCart('1200')
-}
-
 
 
 const [cart, setCart] = useState();
 
 
 useEffect(() => {
-  const data = window.localStorage.getItem('cart')
-  setCart(JSON.parse(data))
+  const data = window.localStorage.getItem('cart');
+  if (data !== null) setCart(JSON.parse(data))
 }, [])
 
 useEffect(() => {
@@ -52,11 +42,23 @@ const router =  useRouter()
 const {
 query:{value}} = router
 
-  const set = parseInt(value)
+const set = parseInt(value)
+
+const calcular = () => { 
+setPrice(produtos.produtos[set].preco * qty )
+setProdutosCart(produtos.produtos[set].nome + produtosCart)
+setEstado('flex')
 
 
 
+}
 
+const [estado, setEstado] = useState('none');
+
+const mudarStyle = {
+  display: estado
+}
+ 
 
 
   return (
@@ -84,8 +86,8 @@ query:{value}} = router
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p>  Garantia de 1 ano </p></div>
             </div>
 
-            <div className = 'detalhesTextComprar' onClick = {buy}>Comprar</div>
-            <div className = 'detalhesTextComprar' onClick = {'addProdutos'}>Carrinho</div>
+            <div className = 'detalhesTextComprar' style = {mudarStyle} onClick = {() => {setCart(price + produtosCart)}}>Comprar</div>
+            <div className = 'detalhesTextComprar' onClick = {calcular}>Carrinho</div>
 
             <div className ='quantidadeComprarBox'>
             <div className = 'quantidade'>
