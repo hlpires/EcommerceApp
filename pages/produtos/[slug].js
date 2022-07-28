@@ -48,14 +48,16 @@ const set = parseInt(value)
 const calcular = () => {
 let updatedValue = {};
 updatedValue = {item1:produtos.produtos[set].nome};
-const filtered = cart.item1;
+const cartData= cart.item1;
+const cartData2= cart.cartData;
+
+
 
 setCart(cart => ({
   ...updatedValue,
-  filtered
+  cartData,
+  cartData2
 
-  
-  
 }));
 }
 
