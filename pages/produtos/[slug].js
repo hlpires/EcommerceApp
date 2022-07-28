@@ -39,7 +39,6 @@ const cartdData = [
 
 ]
 
-console.log(cart)
 
 
 useEffect(() => {
@@ -55,11 +54,14 @@ query:{value}} = router
 const set = parseInt(value)
 
 const calcular = () => {
-
-  if (data !== null){
-    setInfo([produtos.produtos[set].preco + cart?.[0] * qty, produtos.produtos[set].nome])
-  }else{
+  const data = window.localStorage.getItem('cart');
+  if (isNaN(data)){
+    
     setInfo([produtos.produtos[set].preco * qty, produtos.produtos[set].nome])
+    setPegarData('if')
+  }else{
+    setInfo([produtos.produtos[set].preco + cart?.[0] * qty, produtos.produtos[set].nome])
+    setPegarData('else')
   }
 
 setEstado('flex')
