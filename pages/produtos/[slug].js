@@ -118,7 +118,7 @@ const mudarStyle = {
             </div>
             </div>
           </div>
-                {/*  <div className = 'cartBox'>
+                  <div className = 'cartBox'>
                     {cart.map((cart,index) => {
                       return (
                          <div className ='cartProduct1' key={index}>
@@ -126,7 +126,7 @@ const mudarStyle = {
                          </div>
                         );
                       })}
-                  </div> */}
+                  </div> 
         </div> 
 
       </div>
