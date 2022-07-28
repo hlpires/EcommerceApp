@@ -50,13 +50,19 @@ let updatedValue = {};
 updatedValue = {item1:produtos.produtos[set].nome};
 const cartData= cart.item1;
 const cartData2= cart.cartData;
+const cartData3= cart.cartData2;
+const cartData4= cart.cartData3;
+const cartData5= cart.cartData4;
 
 
 
 setCart(cart => ({
   ...updatedValue,
   cartData,
-  cartData2
+  cartData2,
+  cartData3,
+  cartData4,
+  cartData5
 
 }));
 }
