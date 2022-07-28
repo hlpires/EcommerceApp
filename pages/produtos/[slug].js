@@ -63,7 +63,7 @@ const calcular = () => {
     setPegarData('if')
     
   }else{
-    setInfo([produtos.produtos[set].preco + cart?.[0] * qty, produtos.produtos[set].nome])
+    setInfo([produtos.produtos[set].preco + cart?.[0] * qty, produtos.produtos[set].nome +'---'+cart[1]])
     setPegarData('else')
     
   }
@@ -71,7 +71,7 @@ const calcular = () => {
 setEstado('flex')
 
 }
-
+console.log(cart)
 const [estado, setEstado] = useState('none');
 
 
