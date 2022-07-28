@@ -121,9 +121,11 @@ const mudarStyle = {
                   <div className = 'cartBox'>
                     {Object.keys(cart).map((key) => (
                          <div className ='cartProduct1'>
-                         <p className = 'tittleCart'>{key}</p>
-                         </div>                      
+                         <p className = 'tittleCart'>{cart[key]}</p>
+                         
+                         </div>                 
                     ))}
+                    <div className = 'detalhesTextComprar' onClick = {() => {setCart({})}}>apagar</div>
                   </div> 
         </div> 
 
