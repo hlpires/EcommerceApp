@@ -119,13 +119,11 @@ const mudarStyle = {
             </div>
           </div>
                   <div className = 'cartBox'>
-                    {cart.map((cart,index) => {
-                      return (
-                         <div className ='cartProduct1' key={index}>
-                         <p className = 'tittleCart' > name: {cart.nome}</p>
-                         </div>
-                        );
-                      })}
+                    {Object.keys(cart).map((key) => (
+                         <div className ='cartProduct1'>
+                         <p className = 'tittleCart'>{key}</p>
+                         </div>                      
+                    ))}
                   </div> 
         </div> 
 
