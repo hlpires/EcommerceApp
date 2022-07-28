@@ -10,8 +10,8 @@ import {useRouter} from 'next/router'
 const detalhesProdutos = (produtos) => {
 
 const [qty, setQty] = useState(1);
-const [price, setPrice] = useState();
-const [produtosCart, setProdutosCart] = useState('');
+const [Info, setInfo] = useState();
+const [pegarData, setPegarData] = useState('');
  
 const incQty = () => { 
 setQty((prevQty) => prevQty + 1);
@@ -21,30 +21,32 @@ const decQty = () =>{
 setQty((prevQty) => prevQty - 1);
 }
 
-
-
 const [cart, setCart] = useState();
 
-const [todosProdutos,setTodosProdutos] = useState('');
-const [todosPrecos,setTodosPrecos] = useState('');
+
+
 
 
 useEffect(() => {
   const data = window.localStorage.getItem('cart');
   if (data !== null)
   setCart(JSON.parse(data))
-  setTodosProdutos(data)
-  setTodosPrecos(data)
+
+ 
 }, [])
+
+const cartdData = [
+
+]
+
+console.log(cart)
+
 
 useEffect(() => {
   window.localStorage.setItem('cart',JSON.stringify(cart));
   
 
 }, [cart])
-
-
-console.log(cart)
 
 const router =  useRouter()
 const {
@@ -53,18 +55,21 @@ query:{value}} = router
 const set = parseInt(value)
 
 const calcular = () => { 
-setPrice([produtos.produtos[set].preco * qty,todosPrecos] )
-setProdutosCart([produtos.produtos[set].nome,todosProdutos])
+setInfo([produtos.produtos[set].preco + cart?.[0] * qty, [produtos.produtos[set].nome,cart[1]]])
 setEstado('flex')
+
 }
 
 const [estado, setEstado] = useState('none');
+
+
+
 
 const mudarStyle = {
   display: estado
 }
  
-console.log(cart)
+
 
   return (
       
@@ -91,7 +96,7 @@ console.log(cart)
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p>  Garantia de 1 ano </p></div>
             </div>
 
-            <div className = 'detalhesTextComprar' style = {mudarStyle} onClick = {() => {setCart([price,produtosCart])}}>Comprar</div>
+            <div className = 'detalhesTextComprar' style = {mudarStyle} onClick = {() => {setCart(Info)}}>Comprar</div>
             <div className = 'detalhesTextComprar' onClick = {calcular}>Carrinho</div>
 
             <div className ='quantidadeComprarBox'>
@@ -107,6 +112,7 @@ console.log(cart)
                   <div className = 'cartBox'>
 
                     <div className ='cartProduct1'><p className = 'tittleCart'>{cart}</p></div>
+                    <div className ='cartProduct1'><div className = 'clearCart' onClick = {() => {setCart([]),setPrice([]),setProdutosCart([])}}>apagar</div></div>
 
                   </div>
         </div>
