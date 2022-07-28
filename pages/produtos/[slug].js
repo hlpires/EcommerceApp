@@ -15,10 +15,12 @@ const [pegarData, setPegarData] = useState('');
  
 const incQty = () => { 
 setQty((prevQty) => prevQty + 1);
+setEstado('none')
 }
 
 const decQty = () =>{  
 setQty((prevQty) => prevQty - 1);
+setEstado('none')
 }
 
 const [cart, setCart] = useState('');
@@ -59,9 +61,11 @@ const calcular = () => {
     
     setInfo([produtos.produtos[set].preco * qty, produtos.produtos[set].nome])
     setPegarData('if')
+    
   }else{
     setInfo([produtos.produtos[set].preco + cart?.[0] * qty, produtos.produtos[set].nome])
     setPegarData('else')
+    
   }
 
 setEstado('flex')
@@ -69,7 +73,6 @@ setEstado('flex')
 }
 
 const [estado, setEstado] = useState('none');
-
 
 
 
