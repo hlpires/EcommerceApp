@@ -25,8 +25,8 @@ setQty((prevQty) => prevQty - 1);
 
 const [cart, setCart] = useState();
 
-const [todosProdutos,setTodosProdutos] = useState();
-
+const [todosProdutos,setTodosProdutos] = useState('');
+const [todosPrecos,setTodosPrecos] = useState('');
 
 
 useEffect(() => {
@@ -34,6 +34,7 @@ useEffect(() => {
   if (data !== null)
   setCart(JSON.parse(data))
   setTodosProdutos(data)
+  setTodosPrecos(data)
 }, [])
 
 useEffect(() => {
@@ -52,8 +53,8 @@ query:{value}} = router
 const set = parseInt(value)
 
 const calcular = () => { 
-setPrice(produtos.produtos[set].preco * qty )
-setProdutosCart(produtos.produtos[set].nome + todosProdutos)
+setPrice([produtos.produtos[set].preco * qty,todosPrecos] )
+setProdutosCart([produtos.produtos[set].nome,todosProdutos])
 setEstado('flex')
 }
 
@@ -63,7 +64,7 @@ const mudarStyle = {
   display: estado
 }
  
-
+console.log(cart)
 
   return (
       
@@ -90,12 +91,12 @@ const mudarStyle = {
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p>  Garantia de 1 ano </p></div>
             </div>
 
-            <div className = 'detalhesTextComprar' style = {mudarStyle} onClick = {() => {setCart(price + produtosCart)}}>Comprar</div>
+            <div className = 'detalhesTextComprar' style = {mudarStyle} onClick = {() => {setCart([price,produtosCart])}}>Comprar</div>
             <div className = 'detalhesTextComprar' onClick = {calcular}>Carrinho</div>
 
             <div className ='quantidadeComprarBox'>
             <div className = 'quantidade'>
-              <p className = 'quantidadeText'>{cart}</p>
+              <p className = 'quantidadeText'>Quantidade:</p>
               <div className = 'quantidadeItem' onClick = {decQty}>-</div>
               <div className = 'quantidadeItem'><span className = 'count'>{qty}</span></div>
               <div className = 'quantidadeItem' onClick = {incQty}>+</div>
@@ -104,6 +105,8 @@ const mudarStyle = {
             </div>
           </div>
                   <div className = 'cartBox'>
+
+                    <div className ='cartProduct1'><p className = 'tittleCart'>{cart}</p></div>
 
                   </div>
         </div>
