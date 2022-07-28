@@ -21,7 +21,7 @@ const decQty = () =>{
 setQty((prevQty) => prevQty - 1);
 }
 
-const [cart, setCart] = useState();
+const [cart, setCart] = useState('');
 
 
 
@@ -54,8 +54,14 @@ query:{value}} = router
 
 const set = parseInt(value)
 
-const calcular = () => { 
-setInfo([produtos.produtos[set].preco + cart?.[0] * qty, [produtos.produtos[set].nome,cart[1]]])
+const calcular = () => {
+
+  if (data !== null){
+    setInfo([produtos.produtos[set].preco + cart?.[0] * qty, produtos.produtos[set].nome])
+  }else{
+    setInfo([produtos.produtos[set].preco * qty, produtos.produtos[set].nome])
+  }
+
 setEstado('flex')
 
 }
@@ -112,7 +118,7 @@ const mudarStyle = {
                   <div className = 'cartBox'>
 
                     <div className ='cartProduct1'><p className = 'tittleCart'>{cart}</p></div>
-                    <div className ='cartProduct1'><div className = 'clearCart' onClick = {() => {setCart([]),setPrice([]),setProdutosCart([])}}>apagar</div></div>
+                    <div className ='cartProduct1'><div className = 'clearCart' onClick = {() => {setInfo(),setCart()}}>apagar</div></div>
 
                   </div>
         </div>
