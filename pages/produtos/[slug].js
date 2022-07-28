@@ -10,8 +10,9 @@ import {useRouter} from 'next/router'
 const detalhesProdutos = (produtos) => {
 
 const [qty, setQty] = useState(1);
-const [Info, setInfo] = useState();
+const [Info, setInfo] = useState('');
 const [pegarData, setPegarData] = useState('');
+const [cart, setCart] = useState([]);
  
 const incQty = () => { 
 setQty((prevQty) => prevQty + 1);
@@ -23,11 +24,6 @@ setQty((prevQty) => prevQty - 1);
 setEstado('none')
 }
 
-const [cart, setCart] = useState('');
-
-
-
-
 
 useEffect(() => {
   const data = window.localStorage.getItem('cart');
@@ -36,12 +32,6 @@ useEffect(() => {
 
  
 }, [])
-
-const cartdData = [
-
-]
-
-
 
 useEffect(() => {
   window.localStorage.setItem('cart',JSON.stringify(cart));
@@ -56,22 +46,18 @@ query:{value}} = router
 const set = parseInt(value)
 
 const calcular = () => {
-  const data = window.localStorage.getItem('cart');
-  if (isNaN(data)){
-    
-    setInfo([produtos.produtos[set].preco * qty, produtos.produtos[set].nome])
-    setPegarData('if')
-    
-  }else{
-    setInfo([produtos.produtos[set].preco + cart?.[0] * qty, produtos.produtos[set].nome +'---'+cart[1]])
-    setPegarData('else')
-    
-  }
+let updatedValue = {};
+updatedValue = {item1:produtos.produtos[set].nome};
 
-setEstado('flex')
-
+setCart(cart => ({
+  ...cart,
+  ...updatedValue
+}));
 }
+
 console.log(cart)
+
+
 const [estado, setEstado] = useState('none');
 
 
@@ -120,13 +106,16 @@ const mudarStyle = {
             </div>
             </div>
           </div>
-                  <div className = 'cartBox'>
-
-                    <div className ='cartProduct1'><p className = 'tittleCart'>{cart}</p></div>
-                    <div className ='cartProduct1'><div className = 'clearCart' onClick = {() => {setInfo(),setCart()}}>apagar</div></div>
-
-                  </div>
-        </div>
+                {/*  <div className = 'cartBox'>
+                    {cart.map((cart,index) => {
+                      return (
+                         <div className ='cartProduct1' key={index}>
+                         <p className = 'tittleCart' > name: {cart.nome}</p>
+                         </div>
+                        );
+                      })}
+                  </div> */}
+        </div> 
 
       </div>
       </div>
