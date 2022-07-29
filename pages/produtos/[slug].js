@@ -47,7 +47,7 @@ const set = parseInt(value)
 
 const calcular = () => {
 let updatedValue = {};
-updatedValue = {item1:produtos.produtos[set].nome,preco1:produtos.produtos[set].preco};
+updatedValue = {item1:produtos.produtos[set].nome,preco1:produtos.produtos[set].preco * qty};
 
 
 const cartData= cart.item1;
@@ -132,12 +132,8 @@ const mudarStyle = {
             </div>
           </div>
                   <div className = 'cartBox'>
-                    {Object.keys(cart).map((key) => (
-                         <div className ='cartProduct1'>
-                         <p className = 'tittleCart'>{cart[key]}</p>
-                         
-                         </div>                 
-                    ))}
+                    {cart.item1}
+                    {cart.cartPreco}
                     <div className = 'detalhesTextComprar' onClick = {() => {setCart({})}}>apagar</div>
                   </div> 
         </div> 
