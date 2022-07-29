@@ -47,22 +47,35 @@ const set = parseInt(value)
 
 const calcular = () => {
 let updatedValue = {};
-updatedValue = {item1:produtos.produtos[set].nome};
+updatedValue = {item1:produtos.produtos[set].nome,preco1:produtos.produtos[set].preco};
+
+
 const cartData= cart.item1;
 const cartData2= cart.cartData;
 const cartData3= cart.cartData2;
 const cartData4= cart.cartData3;
 const cartData5= cart.cartData4;
 
+const cartPreco= cart.preco1;
+const cartPreco2= cart.cartPreco;
+const cartPreco3= cart.cartPreco2;
+const cartPreco4= cart.cartPreco3;
+const cartPreco5= cart.cartPreco4;
+
 
 
 setCart(cart => ({
   ...updatedValue,
   cartData,
+  cartPreco,
   cartData2,
+  cartPreco2,
   cartData3,
+  cartPreco3,
   cartData4,
-  cartData5
+  cartPreco4,
+  cartData5,
+  cartPreco5
 
 }));
 }

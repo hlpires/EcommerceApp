@@ -32,7 +32,7 @@
   margin-left: 12%;
   margin-top: 1.6%;
   height:30%;
-  
+  cursor: pointer;
   background-image: url(../img/samsung.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -469,11 +469,12 @@ font-size: 18px;
 }
 
 .cartProduct1{
-  width: 100%;
+  width: 50%;
   height: 10%;
   border: 1px solid black;
+  float: left;
   
-  display: flex;
+ 
 }
 
 .tittleCart{
