@@ -130,7 +130,7 @@ const mudarStyle = {
             </div>
 
             <div className = 'detalhesTextComprar' style = {mudarStyle} onClick = {() => {setCart(Info)}}>Comprar</div>
-            <div className = 'detalhesTextComprar' onClick = {calcular}>Carrinho</div>
+            <div className = 'detalhesTextComprar' onClick = {calcular}><p className = 'carrinhoText'>Carrinho</p></div>
 
             <div className ='quantidadeComprarBox'>
             <div className = 'quantidade'>
@@ -193,7 +193,8 @@ const mudarStyle = {
                       </div>
                           )}})()}
 
-                    <div className = 'detalhesTextComprar' onClick = {() => {setCart({})}}>apagar</div>
+                    <div className = 'removerItens' onClick = {() => {setCart({})}}>Remover Itens</div>
+                    <div className = 'comprarStripe' onClick = {'() => {setCart({})}'}>Comprar com Stripe</div>
                   </div> 
         </div> 
 
