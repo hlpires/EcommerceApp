@@ -132,8 +132,36 @@ const mudarStyle = {
             </div>
           </div>
                   <div className = 'cartBox'>
-                    {cart.item1}
-                    {cart.cartPreco}
+                    <div className = 'itemCartBox'>
+                      <div className = 'itemCartImg'></div>
+                      <div className = 'itemCartName'>{cart.cartData}</div>
+                      <div className = 'itemCartPreco'>{'R$' +cart.cartPreco}</div>
+                    </div>
+
+                    <div className = 'itemCartBox'>
+                      <div className = 'itemCartImg'></div>
+                      <div className = 'itemCartName'>{cart.cartData}</div>
+                      <div className = 'itemCartPreco'>{'R$' +cart.cartPreco}</div>
+                    </div>
+
+                    <div className = 'itemCartBox'>
+                      <div className = 'itemCartImg'></div>
+                      <div className = 'itemCartName'>{cart.cartData}</div>
+                      <div className = 'itemCartPreco'>{'R$' +cart.cartPreco}</div>
+                    </div>
+
+                    <div className = 'itemCartBox'>
+                      <div className = 'itemCartImg'></div>
+                      <div className = 'itemCartName'>{cart.cartData}</div>
+                      <div className = 'itemCartPreco'>{'R$' +cart.cartPreco}</div>
+                    </div>
+
+                    <div className = 'itemCartBox'>
+                      <div className = 'itemCartImg'></div>
+                      <div className = 'itemCartName'>{cart.cartData}</div>
+                      <div className = 'itemCartPreco'>{'R$' +cart.cartPreco}</div>
+                    </div>
+
                     <div className = 'detalhesTextComprar' onClick = {() => {setCart({})}}>apagar</div>
                   </div> 
         </div> 

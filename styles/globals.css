@@ -500,3 +500,39 @@ font-size: 18px;
   background-color: yellow;
 
 }
+.itemCartBox{
+margin-top:4%;
+width: 80%;
+margin-left: 10%;
+height: 15%;
+
+border-bottom: 0.5px solid grey;
+display: flex;
+}
+.itemCartName{
+  font-size: 22px;
+  text-align: center;
+  width: 40%;
+  
+  align-self: center;
+  float: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+}
+
+.itemCartImg{
+  margin-top: 2%;
+  height: 80%;
+  width: 20%;
+  background-color: black;
+  float: left;
+}
+.itemCartPreco{
+  float: left;
+  font-size: 22px;
+  font-weight: bolder;
+  text-align: center;
+  align-self: center;
+  width: 40%;
+  background-color: yellow;
+}
