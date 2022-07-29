@@ -134,8 +134,8 @@ const mudarStyle = {
                   <div className = 'cartBox'>
                     <div className = 'itemCartBox'>
                       <div className = 'itemCartImg'></div>
-                      <div className = 'itemCartName'>{cart.cartData}</div>
-                      <div className = 'itemCartPreco'>{'R$' +cart.cartPreco}</div>
+                      <div className = 'itemCartName'>{cart.item1}</div>
+                      <div className = 'itemCartPreco'>{'R$' +cart.preco1}</div>
                     </div>
 
                     <div className = 'itemCartBox'>
@@ -146,20 +146,20 @@ const mudarStyle = {
 
                     <div className = 'itemCartBox'>
                       <div className = 'itemCartImg'></div>
-                      <div className = 'itemCartName'>{cart.cartData}</div>
-                      <div className = 'itemCartPreco'>{'R$' +cart.cartPreco}</div>
+                      <div className = 'itemCartName'>{cart.cartData2}</div>
+                      <div className = 'itemCartPreco'>{'R$' +cart.cartPreco2}</div>
                     </div>
 
                     <div className = 'itemCartBox'>
                       <div className = 'itemCartImg'></div>
-                      <div className = 'itemCartName'>{cart.cartData}</div>
-                      <div className = 'itemCartPreco'>{'R$' +cart.cartPreco}</div>
+                      <div className = 'itemCartName'>{cart.cartData3}</div>
+                      <div className = 'itemCartPreco'>{'R$' +cart.cartPreco3}</div>
                     </div>
 
                     <div className = 'itemCartBox'>
                       <div className = 'itemCartImg'></div>
-                      <div className = 'itemCartName'>{cart.cartData}</div>
-                      <div className = 'itemCartPreco'>{'R$' +cart.cartPreco}</div>
+                      <div className = 'itemCartName'>{cart.cartData4}</div>
+                      <div className = 'itemCartPreco'>{'R$' +cart.cartPreco4}</div>
                     </div>
 
                     <div className = 'detalhesTextComprar' onClick = {() => {setCart({})}}>apagar</div>
