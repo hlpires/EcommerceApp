@@ -3,6 +3,7 @@ import {Header, Product} from '../../components/index'
 import {client} from '../../lib/client'
 import {urlFor} from '../../lib/client'
 import {useRouter} from 'next/router'
+import {checkout} from '../../checkout'
 
 
 
@@ -94,7 +95,7 @@ setCart(cart => ({
 }));
 }
 
-
+console.log(produtos)
 
 
 const [estado, setEstado] = useState('none');
@@ -197,7 +198,16 @@ const mudarStyle = {
                           )}})()}
 
                     <div className = 'removerItens' onClick = {() => {setCart({})}}>Remover Itens</div>
-                    <div className = 'comprarStripe' onClick = {''}>Comprar com Stripe</div>
+                    <div className = 'comprarStripe' onClick = {() => {
+                      checkout({
+                        lineItems:[
+                          {
+                          price:'price_1LR4fdB0IZeAQFsFjvjmaZfU',
+                          quantity:1
+                          }
+                        ]
+                      })
+                    }}>Comprar com Stripe</div>
                   </div> 
         </div> 
 

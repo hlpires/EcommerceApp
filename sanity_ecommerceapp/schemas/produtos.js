@@ -42,6 +42,12 @@ export default {
             title:'Detalhes',
             type:'string',
     
+        },
+        {
+            name: 'id',
+            title:'Id',
+            type:'string',
+    
         }
 
 
