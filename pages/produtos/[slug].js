@@ -9,6 +9,9 @@ import {useRouter} from 'next/router'
 
 const detalhesProdutos = (produtos) => {
 
+
+
+
 const [qty, setQty] = useState(1);
 const [Info, setInfo] = useState('');
 const [cart, setCart] = useState([]);
@@ -91,7 +94,7 @@ setCart(cart => ({
 }));
 }
 
-console.log(cart)
+
 
 
 const [estado, setEstado] = useState('none');
@@ -194,7 +197,7 @@ const mudarStyle = {
                           )}})()}
 
                     <div className = 'removerItens' onClick = {() => {setCart({})}}>Remover Itens</div>
-                    <div className = 'comprarStripe' onClick = {'() => {setCart({})}'}>Comprar com Stripe</div>
+                    <div className = 'comprarStripe' onClick = {''}>Comprar com Stripe</div>
                   </div> 
         </div> 
 

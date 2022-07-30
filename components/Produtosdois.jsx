@@ -12,7 +12,8 @@ const produtosdois = ({produtos}) => {
       query: { value,slug:'slug'}
     },
     )};
-     
+   
+    
 
   return (
     <div className ='produtosdois'>
