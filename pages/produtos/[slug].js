@@ -5,32 +5,14 @@ import {urlFor} from '../../lib/client'
 import {useRouter} from 'next/router'
 import { loadStripe } from '@stripe/stripe-js';
 
-loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+
+
 
 
 const DetalhesProdutos = (produtos) => {
 
   const router =  useRouter()
   const {success,canceled} = router.query;
-
-useEffect(() =>{
-  console.log('works')
-  //const query = new URLSearchParams(window.location.search);
-  if (success!==undefined || canceled !== undefined) {
-    
-          if (success) {
-           console.log('Order PLACED');
-              }
-
-          
-           if (canceled) {
-            console.log('Order canceled -- continue to shop around and checkout when you’re ready.');
-             }
-
-  } 
-
-
-},[success,canceled]);
 
 
 const [qty, setQty] = useState(1);
@@ -70,52 +52,28 @@ const set = parseInt(value)
 
 const calcular = () => {
 let updatedValue = {};
-updatedValue = {item1:produtos.produtos[set].nome,preco1:produtos.produtos[set].preco * qty,imagem1:produtos.produtos[set].imagem?.[0].asset._ref};
+updatedValue = {nome:produtos.produtos[set].nome,
+preco:produtos.produtos[set].preco * qty,
+imagem:produtos.produtos[set].imagem?.[0].asset._ref};
 
 
+const produto2= cart[0]?.item1;
+const produto3= cart[1]?.item2;
+const produto4= cart[2]?.item3;
+const produto5= cart[3]?.item4;
 
 
-const cartData= cart.item1;
-const cartData2= cart.cartData;
-const cartData3= cart.cartData2;
-const cartData4= cart.cartData3;
-const cartData5= cart.cartData4;
+setCart(cart => ([
+  {item1:updatedValue},
+  {item2:produto2},
+  {item3:produto3},
+  {item4:produto4},
+  {item5:produto5},
 
-const cartPreco= cart.preco1;
-const cartPreco2= cart.cartPreco;
-const cartPreco3= cart.cartPreco2;
-const cartPreco4= cart.cartPreco3;
-const cartPreco5= cart.cartPreco4;
-
-const imagemData = cart.imagem1;
-const imagemData2 = cart.imagemData;
-const imagemData3 = cart.imagemData2;
-const imagemData4 = cart.imagemData3;
-const imagemData5 = cart.imagemData4;
-
-
-
-setCart(cart => ({
-  ...updatedValue,
-  cartData,
-  cartPreco,
-  cartData2,
-  cartPreco2,
-  cartData3,
-  cartPreco3,
-  cartData4,
-  cartPreco4,
-  cartData5,
-  cartPreco5,
-  imagemData,
-  imagemData2,
-  imagemData3,
-  imagemData4,
-  imagemData5
-}));
+]));
 }
 
-console.log(produtos)
+
 
 
 const [estado, setEstado] = useState('none');
@@ -126,6 +84,8 @@ const mudarStyle = {
   display: estado
 }
  
+console.log(cart)
+
 
 
   return (
@@ -168,54 +128,54 @@ const mudarStyle = {
           </div>
                   <div className = 'cartBox'>
                   {(() => {
-                    if (typeof cart.item1 !== 'undefined') {
-                       return (
+                    if (typeof cart[0] !== 'undefined') {
+                       return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {urlFor (cart.imagem1)}></img>
-                        <div className = 'itemCartName' >{cart.item1}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart.preco1}</div>
+                        <img className = 'itemCartImg' src = {urlFor (cart[0]?.item1.imagem)  }></img>
+                        <div className = 'itemCartName' >{cart[0]?.item1.nome}</div>
+                        <div className = 'itemCartPreco'>{'R$' +cart[0]?.item1.preco}</div>
                       </div>
                           )}})()}
               
-              {(() => {
-                    if (typeof cart.cartData !== 'undefined') {
-                       return (
+           {(() => {
+                    if (typeof cart[1]?.item2 !== 'undefined') {
+                       return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {urlFor (cart.imagemData)}></img>
-                        <div className = 'itemCartName' >{cart.cartData}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart.cartPreco}</div>
+                        <img className = 'itemCartImg' src = {urlFor (cart[1]?.item2.imagem)}></img>
+                        <div className = 'itemCartName' >{cart[1]?.item2.nome}</div>
+                        <div className = 'itemCartPreco'>{'R$' +cart[1]?.item2.preco}</div>
+                      </div>
+                          )}})()}    
+
+{(() => {
+                    if (typeof cart[2]?.item3 !== 'undefined') {
+                       return ( 
+                        <div className = 'itemCartBox'>
+                        <img className = 'itemCartImg' src = {urlFor (cart[2]?.item3.imagem)  }></img>
+                        <div className = 'itemCartName' >{cart[2]?.item3.nome}</div>
+                        <div className = 'itemCartPreco'>{'R$' +cart[2]?.item3.preco}</div>
                       </div>
                           )}})()}
 
 {(() => {
-                    if (typeof cart.cartData2 !== 'undefined') {
-                       return (
+                    if (typeof cart[3]?.item4 !== 'undefined') {
+                       return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {urlFor (cart.imagemData2)}></img>
-                        <div className = 'itemCartName' >{cart.cartData2}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart.cartPreco2}</div>
+                        <img className = 'itemCartImg' src = {urlFor (cart[3]?.item4.imagem)  }></img>
+                        <div className = 'itemCartName' >{cart[3]?.item4.nome}</div>
+                        <div className = 'itemCartPreco'>{'R$' +cart[3]?.item4.preco}</div>
                       </div>
                           )}})()}
 
 {(() => {
-                    if (typeof cart.cartData3 !== 'undefined') {
-                       return (
+                    if (typeof cart[4]?.item5 !== 'undefined') {
+                       return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {urlFor (cart.imagemData3)}></img>
-                        <div className = 'itemCartName' >{cart.cartData3}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart.cartPreco3}</div>
+                        <img className = 'itemCartImg' src = {urlFor (cart[4]?.item5.imagem)  }></img>
+                        <div className = 'itemCartName' >{cart[4]?.item5.nome}</div>
+                        <div className = 'itemCartPreco'>{'R$' +cart[4]?.item5.preco}</div>
                       </div>
-                          )}})()}
-
-{(() => {
-                    if (typeof cart.cartData4 !== 'undefined') {
-                       return (
-                        <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {urlFor (cart.imagemData4)}></img>
-                        <div className = 'itemCartName' >{cart.cartData4}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart.cartPreco4}</div>
-                      </div>
-                          )}})()}
+                       )}})()}  
 
                     <div className = 'removerItens' onClick = {() => {setCart({})}}>Remover Itens</div>
                     <form action="/api/checkout" method="POST">
