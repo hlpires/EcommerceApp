@@ -3,7 +3,8 @@ import {Header, Product} from '../../components/index'
 import {client} from '../../lib/client'
 import {urlFor} from '../../lib/client'
 import {useRouter} from 'next/router'
-import { loadStripe } from '@stripe/stripe-js';
+import getStripe from '../../lib/getStripe';
+
 
 
 
@@ -12,7 +13,30 @@ import { loadStripe } from '@stripe/stripe-js';
 const DetalhesProdutos = (produtos) => {
 
   const router =  useRouter()
-  const {success,canceled} = router.query;
+
+
+  
+  const handleCheckout = async () => {
+    const stripe = await getStripe();
+
+    const response = await fetch('/api/checkout',{
+      method: 'POST',
+      headers:{
+        'Content-Type':'application/json',
+        'Accept': 'application/json'
+      },
+      body:JSON.stringify(cart),
+    });
+
+    if(response.statusCode === 500) return;
+
+    const data = await response.json();
+
+    console.log('redirecting')
+
+    stripe.redirectToCheckout({sessionId:data.id});
+    
+  }
 
 
 const [qty, setQty] = useState(1);
@@ -180,7 +204,7 @@ console.log(cart)
                     <div className = 'removerItens' onClick = {() => {setCart({})}}>Remover Itens</div>
                     <form action="/api/checkout" method="POST">
                       <section>
-                      <button className = 'comprarStripe' type="submit" role="link">Comprar com Stripe</button>
+                      <button className = 'comprarStripe' type="button" onClick={handleCheckout}>Comprar com Stripe</button>
                       </section>
                     </form>
                   </div> 
