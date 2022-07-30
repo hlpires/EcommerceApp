@@ -72,22 +72,23 @@ const set = parseInt(value)
 const calcular = () => {
 let updatedValue = {};
 updatedValue = {nome:produtos.produtos[set].nome,
-preco:produtos.produtos[set].preco * qty,
+price:produtos.produtos[set].preco * qty,
+quantity:qty,
 imagem:produtos.produtos[set].imagem?.[0].asset._ref};
 
 
-const produto2= cart[0]?.item1;
-const produto3= cart[1]?.item2;
-const produto4= cart[2]?.item3;
-const produto5= cart[3]?.item4;
+const produto2= cart[0];
+const produto3= cart[1];
+const produto4= cart[2];
+const produto5= cart[3];
 
 
 setCart(cart => ([
-  {item1:updatedValue},
-  {item2:produto2},
-  {item3:produto3},
-  {item4:produto4},
-  {item5:produto5},
+  updatedValue,
+  produto2,
+  produto3,
+  produto4,
+  produto5,
 
 ]));
 }
@@ -145,14 +146,16 @@ const mudarStyle = {
             </div>
             </div>
           </div>
+
+          
                   <div className = 'cartBox'>
                   {(() => {
                     if (typeof cart[0] !== 'undefined') {
                        return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {urlFor (cart[0]?.item1.imagem)  }></img>
-                        <div className = 'itemCartName' >{cart[0]?.item1.nome}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart[0]?.item1.preco}</div>
+                        <img className = 'itemCartImg' src = {urlFor (cart[0].imagem)  }></img>
+                        <div className = 'itemCartName' >{cart[0].nome}</div>
+                        <div className = 'itemCartPreco'>{'R$' +cart[0].price}</div>
                       </div>
                           )}})()}
               
@@ -160,9 +163,9 @@ const mudarStyle = {
                     if (typeof cart[1]?.item2 !== 'undefined') {
                        return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {urlFor (cart[1]?.item2.imagem)}></img>
-                        <div className = 'itemCartName' >{cart[1]?.item2.nome}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart[1]?.item2.preco}</div>
+                        <img className = 'itemCartImg' src = {'urlFor (cart[1]?.item2.imagem)'}></img>
+                        <div className = 'itemCartName' >{'cart[1]?.item2.nome'}</div>
+                        <div className = 'itemCartPreco'>{'R$ +cart[1]?.item2.preco'}</div>
                       </div>
                           )}})()}    
 
@@ -170,9 +173,9 @@ const mudarStyle = {
                     if (typeof cart[2]?.item3 !== 'undefined') {
                        return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {urlFor (cart[2]?.item3.imagem)  }></img>
-                        <div className = 'itemCartName' >{cart[2]?.item3.nome}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart[2]?.item3.preco}</div>
+                        <img className = 'itemCartImg' src = {'urlFor (cart[2]?.item3.imagem)  '}></img>
+                        <div className = 'itemCartName' >{'cart[2]?.item3.nome'}</div>
+                        <div className = 'itemCartPreco'>{'R$ +cart[2]?.item3.preco'}</div>
                       </div>
                           )}})()}
 
@@ -180,9 +183,9 @@ const mudarStyle = {
                     if (typeof cart[3]?.item4 !== 'undefined') {
                        return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {urlFor (cart[3]?.item4.imagem)  }></img>
-                        <div className = 'itemCartName' >{cart[3]?.item4.nome}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart[3]?.item4.preco}</div>
+                        <img className = 'itemCartImg' src = {'urlFor (cart[3]?.item4.imagem)  '}></img>
+                        <div className = 'itemCartName' >{'cart[3]?.item4.nome'}</div>
+                        <div className = 'itemCartPreco'>{'R$ +cart[3]?.item4.preco'}</div>
                       </div>
                           )}})()}
 
@@ -190,9 +193,9 @@ const mudarStyle = {
                     if (typeof cart[4]?.item5 !== 'undefined') {
                        return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {urlFor (cart[4]?.item5.imagem)  }></img>
-                        <div className = 'itemCartName' >{cart[4]?.item5.nome}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart[4]?.item5.preco}</div>
+                        <img className = 'itemCartImg' src = {'urlFor (cart[4]?.item5.imagem)  '}></img>
+                        <div className = 'itemCartName' >{'cart[4]?.item5.nome'}</div>
+                        <div className = 'itemCartPreco'>{'R$ +cart[4]?.item5.preco'}</div>
                       </div>
                        )}})()}  
 
