@@ -7,9 +7,6 @@ import getStripe from '../../lib/getStripe';
 
 
 
-
-
-
 const DetalhesProdutos = (produtos) => {
 
   const router =  useRouter()
@@ -17,18 +14,17 @@ const DetalhesProdutos = (produtos) => {
 
   
   const handleCheckout = async () => {
+    
     const stripe = await getStripe();
 
     const response = await fetch('/api/checkout',{
       method: 'POST',
       headers:{
-        'Content-Type':'application/json',
-        'Accept': 'application/json'
+        'Content-Type':'application/json'    
       },
       body:JSON.stringify(cart),
     });
 
-    if(response.statusCode === 500) return;
 
     const data = await response.json();
 
@@ -40,7 +36,6 @@ const DetalhesProdutos = (produtos) => {
 
 
 const [qty, setQty] = useState(1);
-const [Info, setInfo] = useState('');
 const [cart, setCart] = useState([]);
  
 const incQty = () => { 
@@ -102,13 +97,13 @@ setCart(cart => ([
 
 const [estado, setEstado] = useState('none');
 
-
+console.log(cart)
 
 const mudarStyle = {
   display: estado
 }
  
-console.log(cart)
+
 
 
 
