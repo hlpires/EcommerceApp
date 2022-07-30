@@ -3,14 +3,34 @@ import {Header, Product} from '../../components/index'
 import {client} from '../../lib/client'
 import {urlFor} from '../../lib/client'
 import {useRouter} from 'next/router'
-import {checkout} from '../../checkout'
+import { loadStripe } from '@stripe/stripe-js';
 
-
+loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
 
 const DetalhesProdutos = (produtos) => {
 
+  const router =  useRouter()
+  const {success,canceled} = router.query;
 
+useEffect(() =>{
+  console.log('works')
+  //const query = new URLSearchParams(window.location.search);
+  if (success!==undefined || canceled !== undefined) {
+    
+          if (success) {
+           console.log('Order PLACED');
+              }
+
+          
+           if (canceled) {
+            console.log('Order canceled -- continue to shop around and checkout when you’re ready.');
+             }
+
+  } 
+
+
+},[success,canceled]);
 
 
 const [qty, setQty] = useState(1);
@@ -42,7 +62,7 @@ useEffect(() => {
 
 }, [cart])
 
-const router =  useRouter()
+
 const {
 query:{value}} = router
 
@@ -198,16 +218,11 @@ const mudarStyle = {
                           )}})()}
 
                     <div className = 'removerItens' onClick = {() => {setCart({})}}>Remover Itens</div>
-                    <div className = 'comprarStripe' onClick = {() => {
-                      checkout({
-                        lineItems:[
-                          {
-                          price:'price_1LR4fdB0IZeAQFsFjvjmaZfU',
-                          quantity:1
-                          }
-                        ]
-                      })
-                    }}>Comprar com Stripe</div>
+                    <form action="/api/checkout" method="POST">
+                      <section>
+                      <button className = 'comprarStripe' type="submit" role="link">Comprar com Stripe</button>
+                      </section>
+                    </form>
                   </div> 
         </div> 
 
