@@ -8,7 +8,7 @@ import {checkout} from '../../checkout'
 
 
 
-const detalhesProdutos = (produtos) => {
+const DetalhesProdutos = (produtos) => {
 
 
 
@@ -228,4 +228,4 @@ export const getServerSideProps = async () => {
  }
 }
 
-export default detalhesProdutos
+export default DetalhesProdutos
