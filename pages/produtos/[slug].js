@@ -13,7 +13,6 @@ const DetalhesProdutos = (produtos) => {
 
 
 
-const [cartApi,setCartAPi] = useState([]);
 const [qty, setQty] = useState(1);
 const [cart, setCart] = useState([]);
  
