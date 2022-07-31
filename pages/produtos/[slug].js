@@ -1,5 +1,5 @@
 import React,{createContext,useContext,useState,useEffect,useRef} from 'react';
-import {Header, Product} from '../../components/index'
+import {Header,Produtosdois} from '../../components/index'
 import {client} from '../../lib/client'
 import {urlFor} from '../../lib/client'
 import {useRouter} from 'next/router'
@@ -211,6 +211,22 @@ const handleCheckout = async () => {
 
       </div>
       </div>
+      <div className ='produtosdois'>
+        <div className ='position'>
+            <div className ='produtosdoisbox'>
+                <div className = 'produtosdoisItem' onClick = {'() => sendProps'}> <img className='produtosDoisImg' src={urlFor(produtos.produtos[2].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {'() => sendProps'}><img className='produtosDoisImg' src={urlFor(produtos.produtos[0].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {'() => sendProps(3)'}><img className='produtosDoisImg' src={urlFor(produtos.produtos[3].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {'() => sendProps(3)'}><img className='produtosDoisImg' src={urlFor(produtos.produtos[4].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {'() => sendProps(3)'}><img className='produtosDoisImg' src={urlFor(produtos.produtos[5].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {'() => sendProps(3)'}><img className='produtosDoisImg' src={urlFor(produtos.produtos[6].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {'() => sendProps(3)'}><img className='produtosDoisImg' src={urlFor(produtos.produtos[8].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {'() => sendProps(3)'}><img className='produtosDoisImg' src={urlFor(produtos.produtos[9].imagem?.[0])} alt="" /></div>
+            </div>
+        </div>
+    </div>
+
+
     </div>
   )
 }
