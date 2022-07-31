@@ -59,8 +59,6 @@ setCart((prevState) => ([
 updatedValue,
 ...prevState
 
-    
-
 ]));
 
 
@@ -163,7 +161,7 @@ const handleCheckout = async () => {
                           )}})()}
               
            {(() => {
-                    if (typeof cart[1] !== 'undefined' && cart[1] !== null && cart.length == 5 ) {
+                    if (typeof cart[1] !== 'undefined' && cart[1] !== null ) {
                        return ( 
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[1].imagem)}></img>
@@ -173,7 +171,7 @@ const handleCheckout = async () => {
                           )}})()}    
 
 {(() => {
-                    if (typeof cart[2] !== 'undefined' && cart[2] !== null && cart.length == 5) {
+                    if (typeof cart[2] !== 'undefined' && cart[2] !== null ) {
                        return ( 
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[2].imagem)  }></img>
@@ -183,7 +181,7 @@ const handleCheckout = async () => {
                           )}})()}
 
 {(() => {
-                    if (typeof cart[3] !== 'undefined' && cart[3] !== null && cart.length == 5) {
+                    if (typeof cart[3] !== 'undefined' && cart[3] !== null) {
                        return ( 
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[3].imagem) }></img>
@@ -193,7 +191,7 @@ const handleCheckout = async () => {
                           )}})()}
 
 {(() => {
-                    if (typeof cart[4] !== 'undefined' && cart[4] !== null && cart.length == 5) {
+                    if (typeof cart[4] !== 'undefined' && cart[4] !== null) {
                        return ( 
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[4].imagem)  }></img>
