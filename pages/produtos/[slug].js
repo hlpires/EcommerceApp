@@ -55,21 +55,16 @@ quantity:qty,
 imagem:produtos.produtos[set].imagem?.[0].asset._ref};
 
 
-const produto2= cart[0];
-const produto3= cart[1];
-const produto4= cart[2];
-const produto5= cart[3];
+setCart((prevState) => ([
+updatedValue,
+...prevState
 
-
-setCart(cart => ([
-  updatedValue,
-  produto2,
-  produto3,
-  produto4,
-  produto5,
+    
 
 ]));
 
+
+console.log(cart)
 
 }
 
@@ -207,7 +202,7 @@ const handleCheckout = async () => {
                       </div>
                        )}})()}   
 
-                    <div className = 'removerItens' onClick = {() => {setCart({})}}>Remover Itens</div>
+                    <div className = 'removerItens' onClick = {() => {setCart([])}}>Remover Itens</div>
                     <form action="/api/checkout" method="POST">
                       <section>
                       <button className = 'comprarStripe' type="button" onClick={handleCheckout}>Comprar com Stripe</button>
