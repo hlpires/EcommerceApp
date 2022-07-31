@@ -200,7 +200,7 @@ const handleCheckout = async () => {
                       </div>
                        )}})()}   
 
-                    <div className = 'removerItens' onClick = {() => {setCart([])}}>Remover Itens</div>
+                    <div className = 'removerItens' onClick = {() => {setCart([])}}><h6>Remover Itens</h6></div>
                     <form action="/api/checkout" method="POST">
                       <section>
                       <button className = 'comprarStripe' type="button" onClick={handleCheckout}>Comprar com Stripe</button>
