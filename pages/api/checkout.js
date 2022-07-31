@@ -14,14 +14,12 @@ export default async function handler(req,res) {
             payment_method_types: ['card'],
             billing_address_collection: 'auto',
 
-            line_items: [
-              {
-                
-                
-                quantity: 1,
-              },
-            ],
-            
+            line_items: req.body.map((item)=> {
+              
+ 
+
+
+            } ),
             success_url: `${req.headers.origin}/?success=true`,
             cancel_url: `${req.headers.origin}/?canceled=true`,
           }
