@@ -1,12 +1,10 @@
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-export default async function handler(req, res) {
+export default async function handler(req,res) {
   if (req.method === 'POST') {
 
-    console.log(req.body.cart)
-
-
+    console.log(req.body.cartApi)
 
     try {
       
@@ -14,12 +12,12 @@ export default async function handler(req, res) {
             submit_type:'pay',
             mode: 'payment',
             payment_method_types: ['card'],
-            billing_adress_collection: 'auto',
+            billing_address_collection: 'auto',
 
             line_items: [
               {
-                // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                price: '{{PRICE_ID}}',
+                
+                
                 quantity: 1,
               },
             ],
@@ -42,3 +40,10 @@ export default async function handler(req, res) {
     res.status(405).end('Method Not Allowed');
   }
 }
+
+
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};

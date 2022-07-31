@@ -12,29 +12,8 @@ const DetalhesProdutos = (produtos) => {
   const router =  useRouter()
 
 
-  
-  const handleCheckout = async () => {
-    
-    const stripe = await getStripe();
 
-    const response = await fetch('/api/checkout',{
-      method: 'POST',
-      headers:{
-        'Content-Type':'application/json'    
-      },
-      body:JSON.stringify(cart),
-    });
-
-
-    const data = await response.json();
-
-    console.log('redirecting')
-
-    stripe.redirectToCheckout({sessionId:data.id});
-    
-  }
-
-
+const [cartApi,setCartAPi] = useState([]);
 const [qty, setQty] = useState(1);
 const [cart, setCart] = useState([]);
  
@@ -91,6 +70,17 @@ setCart(cart => ([
   produto5,
 
 ]));
+
+setCartAPi(cart => ([
+  updatedValue,
+  produto2,
+  produto3,
+  produto4,
+  produto5,
+
+]));
+
+
 }
 
 
@@ -98,12 +88,40 @@ setCart(cart => ([
 
 const [estado, setEstado] = useState('none');
 
-console.log(cart)
+
 
 const mudarStyle = {
   display: estado
 }
  
+
+
+
+  
+const handleCheckout = async () => {
+    
+  const stripe = await getStripe();
+  console.log(cartApi)
+
+  const response = await fetch('/api/checkout',{
+    
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(cartApi),
+    
+  });
+
+  const data = await response.json();
+
+  stripe.redirectToCheckout({sessionId:data.id});
+  
+}
+
+
+
+
+
+
 
 
 
