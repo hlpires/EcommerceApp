@@ -888,12 +888,13 @@ display: flex;
   }
   .positionDetalhes{
   width: 1500px;
-  height: 800px;
+  height: 600px;
   
   float: left;
   }
   .detalhesBox{
     margin-top: 2%;
+    margin-left: 2%;
    
     width: 100%;
     height: 100%;
@@ -931,28 +932,22 @@ display: flex;
   }
   .detalhesImgTittle{
     width: 60%;
-  
     height: 10%;
     margin-left: 20%;
     margin-top: 10%;
     float: left;
-    font-size:50px;
-  
+    font-size:30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bolder;
   }
-  
-  
-  
   .detalhesTextDetails{
-    margin-top: 12%;
+    margin-top: 6%;
     font-size: 22px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 40%;
-    
+    width: 46%;
     float: left;
-    height: 20%;
-  
+    height: 40%;
+    
   }
   
   
@@ -968,11 +963,12 @@ display: flex;
     background-color: #2189ff;
     color: white;
     justify-content: center;
-    font-size: 25px;
+    font-size: 18px;
     display: flex;
     font-weight: bolder;
     cursor: pointer;
     float: left;
+    border-radius: 10px;
   
   }
   
@@ -997,7 +993,7 @@ display: flex;
   }
   
   .quantidadeComprarBox{
-    width: 40%;
+    width: 50%;
     margin-top: 5%;
    
    float: left;
@@ -1006,11 +1002,8 @@ display: flex;
     display: block;
   }
   .quantidade{
-    
-    
-    width:80%;
-   
-    height: 50%;
+    width:90%;
+    height: 80%;
     float: left;
     display: flex;
     
