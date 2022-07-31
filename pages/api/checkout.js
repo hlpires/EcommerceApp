@@ -20,7 +20,7 @@ export default async function handler(req,res) {
                 price_data:{
                   currency:'brl',
                   product_data:{
-                    name: item.name,
+                    name: item.nome,
                     
 
                   },
@@ -29,7 +29,7 @@ export default async function handler(req,res) {
                 },
                 adjustable_quantity:{
                   enabled:true,
-                  minmum:1,
+                  minimum:1,
 
                 },
                 quantity:item.quantity

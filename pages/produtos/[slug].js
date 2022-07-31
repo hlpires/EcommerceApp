@@ -70,15 +70,6 @@ setCart(cart => ([
 
 ]));
 
-setCartAPi(cart => ([
-  updatedValue,
-  produto2,
-  produto3,
-  produto4,
-  produto5,
-
-]));
-
 
 }
 
