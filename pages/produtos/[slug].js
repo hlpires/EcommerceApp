@@ -160,44 +160,44 @@ const mudarStyle = {
                           )}})()}
               
            {(() => {
-                    if (typeof cart[1]?.item2 !== 'undefined') {
+                    if (typeof cart[1] !== 'undefined' && cart[1] !== null && cart.length == 5 ) {
                        return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {'urlFor (cart[1]?.item2.imagem)'}></img>
-                        <div className = 'itemCartName' >{'cart[1]?.item2.nome'}</div>
-                        <div className = 'itemCartPreco'>{'R$ +cart[1]?.item2.preco'}</div>
+                        <img className = 'itemCartImg' src = {urlFor (cart[1].imagem)}></img>
+                        <div className = 'itemCartName' >{cart[1].nome}</div>
+                        <div className = 'itemCartPreco'>{'R$' +cart[1].price}</div>
                       </div>
                           )}})()}    
 
 {(() => {
-                    if (typeof cart[2]?.item3 !== 'undefined') {
+                    if (typeof cart[2] !== 'undefined' && cart[2] !== null && cart.length == 5) {
                        return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {'urlFor (cart[2]?.item3.imagem)  '}></img>
-                        <div className = 'itemCartName' >{'cart[2]?.item3.nome'}</div>
-                        <div className = 'itemCartPreco'>{'R$ +cart[2]?.item3.preco'}</div>
+                        <img className = 'itemCartImg' src = {urlFor (cart[2].imagem)  }></img>
+                        <div className = 'itemCartName' >{cart[2].nome}</div>
+                        <div className = 'itemCartPreco'>{'R$' +cart[2].price}</div>
                       </div>
                           )}})()}
 
 {(() => {
-                    if (typeof cart[3]?.item4 !== 'undefined') {
+                    if (typeof cart[3] !== 'undefined' && cart[3] !== null && cart.length == 5) {
                        return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {'urlFor (cart[3]?.item4.imagem)  '}></img>
-                        <div className = 'itemCartName' >{'cart[3]?.item4.nome'}</div>
-                        <div className = 'itemCartPreco'>{'R$ +cart[3]?.item4.preco'}</div>
+                        <img className = 'itemCartImg' src = {urlFor (cart[3].imagem) }></img>
+                        <div className = 'itemCartName' >{cart[3].nome}</div>
+                        <div className = 'itemCartPreco'>{'R$' +cart[3].price}</div>
                       </div>
                           )}})()}
 
 {(() => {
-                    if (typeof cart[4]?.item5 !== 'undefined') {
+                    if (typeof cart[4] !== 'undefined' && cart[4] !== null && cart.length == 5) {
                        return ( 
                         <div className = 'itemCartBox'>
-                        <img className = 'itemCartImg' src = {'urlFor (cart[4]?.item5.imagem)  '}></img>
-                        <div className = 'itemCartName' >{'cart[4]?.item5.nome'}</div>
-                        <div className = 'itemCartPreco'>{'R$ +cart[4]?.item5.preco'}</div>
+                        <img className = 'itemCartImg' src = {urlFor (cart[4].imagem)  }></img>
+                        <div className = 'itemCartName' >{cart[4].nome}</div>
+                        <div className = 'itemCartPreco'>{'R$' +cart[4].price}</div>
                       </div>
-                       )}})()}  
+                       )}})()}   
 
                     <div className = 'removerItens' onClick = {() => {setCart({})}}>Remover Itens</div>
                     <form action="/api/checkout" method="POST">
