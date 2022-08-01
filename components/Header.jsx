@@ -8,9 +8,8 @@ const Header = ({ header }) => {
     <div>
       <div className = 'headerPosition'>
       <Link href="/"><div className = 'logo' ></div></Link>
-        <div className = 'menu'>
-          <div className ='menuitem1'></div>
-          <div className ='menuitem2'></div>
+        <div className = 'menu'>         
+          
         </div>
       </div>
     </div>
