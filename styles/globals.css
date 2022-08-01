@@ -465,7 +465,7 @@ font-size: 18px;
   height: 90%;
   font-weight: bolder;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
+  cursor: pointer;
   font-size: 23px;
   width: 20%;
   border:1px solid black;
@@ -914,7 +914,6 @@ font-size: 23px;
     
     width: 50%;
     height: 100%;
-    
     float: left;
     display:inline-block;
     justify-content: center;
