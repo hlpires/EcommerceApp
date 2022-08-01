@@ -4,7 +4,7 @@ import {client} from '../../lib/client'
 import {urlFor} from '../../lib/client'
 import {useRouter} from 'next/router'
 import getStripe from '../../lib/getStripe';
-
+import Image from 'next/image'
 
 
 
@@ -212,20 +212,7 @@ const handleCheckout = async () => {
 
       </div>
       </div>
-      <div className ='produtosdois'>
-        <div className ='position'>
-            <div className ='produtosdoisbox'>
-            <a href = '/'><div className = 'produtosdoisItem'> <img className='produtosDoisImg' src={urlFor(produtos.produtos[2].imagem?.[0])} alt="" /></div></a> 
-            <a href = '/'><div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos.produtos[0].imagem?.[0])} alt="" /></div></a>
-            <a href = '/'><div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos.produtos[3].imagem?.[0])} alt="" /></div></a>
-            <a href = '/'><div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos.produtos[4].imagem?.[0])} alt="" /></div></a>
-            <a href = '/'><div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos.produtos[5].imagem?.[0])} alt="" /></div></a>
-            <a href = '/'><div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos.produtos[6].imagem?.[0])} alt="" /></div></a>
-            <a href = '/'><div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos.produtos[8].imagem?.[0])} alt="" /></div></a>
-            <a href = '/'><div className = 'produtosdoisItem'><img className='produtosDoisImg' src={urlFor(produtos.produtos[9].imagem?.[0])} alt="" /></div></a>
-            </div>
-        </div>
-    </div>
+
 
 
     </div>
