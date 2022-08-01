@@ -212,7 +212,7 @@ const handleCheckout = async () => {
 
       </div>
       </div>
-
+    
 
 
     </div>
