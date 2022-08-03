@@ -11,7 +11,7 @@ const Home = ({produtos}) => (
       <Banner produtos = {produtos}/>
       <Produtos produtos = {produtos}/>
       <Produtosdois produtos = {produtos}/>
-      <Art/>
+     
     </div> 
 );
 

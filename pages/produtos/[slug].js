@@ -202,30 +202,27 @@ const handleCheckout = async () => {
                        )}})()}   
 
                     <div className = 'removerItens' onClick = {() => {setCart([])}}><h6>Remover Itens</h6></div>
-                    <form action="/api/checkout" method="POST">
-                      <section>
-                      <button className = 'comprarStripe' type="button" onClick={handleCheckout}>Comprar com Stripe</button>
-                      </section>
-                    </form>
-                  </div> 
+                                  
+                      <button className = 'comprarStripe' type="button" onClick={handleCheckout}>Comprar com Stripe</button>            
+                      </div>
         </div> 
 
       </div>
       
       </div>
       <div className ='produtosdois'>
-        <div className ='position'>
+        
             <div className ='produtosdoisbox1'>
-                <div className = 'produtosdoisItem' onClick = {() => sendProps('2')}> <img className='produtosDoisImg' src={urlFor(produtos.produtos[2].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem' onClick = {() => sendProps('0')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[0].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem' onClick = {() => sendProps('3')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[3].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem' onClick = {() => sendProps('4')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[4].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem' onClick = {() => sendProps('5')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[5].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem' onClick = {() => sendProps('6')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[6].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem' onClick = {() => sendProps('8')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[8].imagem?.[0])} alt="" /></div>
-                <div className = 'produtosdoisItem' onClick = {() => sendProps('9')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[9].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' > <a href = '/'><img className='produtosDoisImg' src={urlFor(produtos.produtos[2].imagem?.[0])} alt="" /></a></div>
+                <div className = 'produtosdoisItem' ><a href = '/'><img className='produtosDoisImg' src={urlFor(produtos.produtos[0].imagem?.[0])} alt="" /></a></div>
+                <div className = 'produtosdoisItem' ><a href = '/'><img className='produtosDoisImg' src={urlFor(produtos.produtos[3].imagem?.[0])} alt="" /></a></div>
+                <div className = 'produtosdoisItem' ><a href = '/'><img className='produtosDoisImg' src={urlFor(produtos.produtos[4].imagem?.[0])} alt="" /></a></div>
+                <div className = 'produtosdoisItem' ><a href = '/'><img className='produtosDoisImg' src={urlFor(produtos.produtos[5].imagem?.[0])} alt="" /></a></div>
+                <div className = 'produtosdoisItem' ><a href = '/'><img className='produtosDoisImg' src={urlFor(produtos.produtos[6].imagem?.[0])} alt="" /></a></div>
+                <div className = 'produtosdoisItem' ><a href = '/'><img className='produtosDoisImg' src={urlFor(produtos.produtos[8].imagem?.[0])} alt="" /></a></div>
+                <div className = 'produtosdoisItem'><a href = '/'><img className='produtosDoisImg' src={urlFor(produtos.produtos[9].imagem?.[0])} alt="" /></a></div>
             </div>
-        </div>
+        
     </div>
 
 
