@@ -1207,8 +1207,7 @@ font-size: 23px;
     height:90%;
     margin-top: 1%;
     width: 28%;
-    background-image: url(../img/busca.png);
-    background-repeat: no-repeat;
+    background-image:url(../img/bannerCell.png);
     background-size: 100%;
     float: left;
   }
@@ -1314,9 +1313,9 @@ font-size: 23px;
     height: 500px;
     background-image:url(../img/bannerBackground.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
    justify-content: center;
-   
+   border-bottom: 1px solid black;
   }
   .produtos{
     margin-top: 40px;
@@ -1898,8 +1897,9 @@ font-size: 23px;
     height: 600px;
     border-bottom: 1px solid black;
    justify-content: center;
-   background-image:url(../img/bannerBackground.png);
-   background-size: 100%;
+   background-image:url(../img/bannerCell.png);
+   background-size: 100% 100%;
+  
   }
   .produtos{
     margin-top: 40px;
