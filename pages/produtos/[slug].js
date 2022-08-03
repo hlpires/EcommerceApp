@@ -123,10 +123,11 @@ const handleCheckout = async () => {
         <div className = 'detalhesBox'>
           <div className='detalhesText'>
           <div className='detalhesImg'>
-            <div className = 'detalhesImgTittle' >{produtos.produtos[set].nome}</div>
+            
             <img className = 'detalhesImgSize' src = {urlFor(produtos.produtos[set].imagem?.[0].asset._ref)}></img>
           </div>
-            
+            <div className = 'conteudoProdutosBox'>
+            <div className = 'detalhesImgTittle' >{produtos.produtos[set].nome}</div>
             <div className = 'detalhesTextDetails'>{produtos.produtos[set].detalhes}</div>
             <div className ='multiD'>
               <div className = 'multiItem'> <div id='multiImg1' className ='multiImg' alt="" /> <p>  Frete Grátis </p></div>
@@ -134,16 +135,18 @@ const handleCheckout = async () => {
               <div className = 'multiItem'> <div id='multiImg3' className ='multiImg' alt="" /> <p>  Garantia de 1 ano </p></div>
             </div>
 
-            <div className = 'detalhesTextComprar' style = {mudarStyle} onClick = {() => {setCart(Info)}}>Comprar</div>
+            
             <div className = 'detalhesTextComprar' onClick = {calcular}><p className = 'carrinhoText'>Carrinho</p></div>
 
             <div className ='quantidadeComprarBox'>
             <div className = 'quantidade'>
               <p className = 'quantidadeText'>Quantidade:</p>
-              <div className = 'quantidadeItem' onClick = {decQty}>-</div>
+              <div className = 'quantidadeItem' id = 'quantidademais' onClick = {incQty}></div>
               <div className = 'quantidadeItem'><span className = 'count'>{qty}</span></div>
-              <div className = 'quantidadeItem' onClick = {incQty}>+</div>
+              
+              <div className = 'quantidadeItem' id = 'quantidademenos' onClick = {decQty}></div>
 
+            </div>
             </div>
             </div>
           </div>
@@ -221,7 +224,7 @@ const handleCheckout = async () => {
              <div className = 'produtosdoisItem' ><Link href ='/'><a> <img className='produtosDoisImg' src={urlFor(produtos.produtos[8].imagem?.[0])} alt="" /></a></Link></div>
              <div className = 'produtosdoisItem'><Link href ='/'><a> <img className='produtosDoisImg' src={urlFor(produtos.produtos[9].imagem?.[0])} alt="" /></a></Link></div>
             </div>
-        
+       
     </div>
 
 
