@@ -215,7 +215,7 @@ const handleCheckout = async () => {
       </div>
       <div className ='produtosdois'>
         <div className ='position'>
-            <div className ='produtosdoisbox'>
+            <div className ='produtosdoisbox1'>
                 <div className = 'produtosdoisItem' onClick = {() => sendProps('2')}> <img className='produtosDoisImg' src={urlFor(produtos.produtos[2].imagem?.[0])} alt="" /></div>
                 <div className = 'produtosdoisItem' onClick = {() => sendProps('0')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[0].imagem?.[0])} alt="" /></div>
                 <div className = 'produtosdoisItem' onClick = {() => sendProps('3')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[3].imagem?.[0])} alt="" /></div>

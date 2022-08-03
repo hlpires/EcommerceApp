@@ -598,6 +598,11 @@ font-size: 23px;
   border: none;
   
 }
+.produtosdoisbox1{
+  max-width: 1540px;
+  margin-top: 2%;
+  margin-left: -5%;
+}
 }
 
 @media (min-width: 900px) and (max-width:1349px){
@@ -1170,6 +1175,11 @@ font-size: 23px;
     font-weight: bolder;
     border-radius: 5px;
   }
+  .produtosdoisbox1{
+ 
+    margin-top: 2%;
+  
+  }
 }
 
 @media (min-width: 600px) and (max-width:899px){
@@ -1449,7 +1459,7 @@ font-size: 23px;
   .produtosdoisItem{
     width: 38%;
     margin-top: 10%;
-    height: 18%;
+    height: 25%;
     cursor: pointer;
     margin-left:8%;
     background-color: #f7f7f7;
@@ -1747,6 +1757,13 @@ font-size: 23px;
     font-weight: bolder;
     border-radius: 10px;
     border: none;
+  }
+
+  .produtosdoisbox1{
+   
+    
+    margin-left: -5%;
+    
   }
 }
 @media(max-width:599px){
@@ -2339,5 +2356,11 @@ font-size: 23px;
     font-weight: bolder;
     border-radius: 2px;
     border: none;
+  }
+  .produtosdoisbox1{
+   
+    margin-top: 100%;
+    
+    
   }
 }
