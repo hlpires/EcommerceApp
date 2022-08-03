@@ -4,7 +4,7 @@ import {client} from '../../lib/client'
 import {urlFor} from '../../lib/client'
 import {useRouter} from 'next/router'
 import getStripe from '../../lib/getStripe';
-
+import Image from 'next/image'
 
 
 
@@ -211,7 +211,24 @@ const handleCheckout = async () => {
         </div> 
 
       </div>
+      
       </div>
+      <div className ='produtosdois'>
+        <div className ='position'>
+            <div className ='produtosdoisbox'>
+                <div className = 'produtosdoisItem' onClick = {() => sendProps('2')}> <img className='produtosDoisImg' src={urlFor(produtos.produtos[2].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {() => sendProps('0')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[0].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {() => sendProps('3')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[3].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {() => sendProps('4')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[4].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {() => sendProps('5')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[5].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {() => sendProps('6')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[6].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {() => sendProps('8')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[8].imagem?.[0])} alt="" /></div>
+                <div className = 'produtosdoisItem' onClick = {() => sendProps('9')}><img className='produtosDoisImg' src={urlFor(produtos.produtos[9].imagem?.[0])} alt="" /></div>
+            </div>
+        </div>
+    </div>
+
+
     
 
 

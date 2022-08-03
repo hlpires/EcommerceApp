@@ -1,6 +1,6 @@
 import React from 'react'
 import {client} from '../lib/client'
-import {Header,FooterBanner,Banner,Produtos,Produtosdois,Art} from '../components/index'
+import {Header,Banner,Produtos,Produtosdois,Art} from '../components/index'
 
 
 
