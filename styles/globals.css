@@ -269,6 +269,7 @@ h5{
   font-size: 25px;
   font-weight: bolder;
   cursor: pointer;
+  border-radius: 15px;
 }
 .produtosdois{
   
@@ -1428,7 +1429,7 @@ font-size: 23px;
     font-weight: bolder;
     cursor: pointer;
     float: left;
-    border-radius: 10px;
+    border-radius: 5px;
   }
   .produtosdois{
     
