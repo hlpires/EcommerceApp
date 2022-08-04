@@ -155,6 +155,7 @@ const handleCheckout = async () => {
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[0].imagem)  }></img>
                         <div className = 'itemCartName' >{cart[0].nome}</div>
+                        <div className = 'itemCartName' >{ cart[0].quantity}</div>
                         <div className = 'itemCartPreco'>{'R$' +cart[0].price}</div>
                       </div>
                           )}})()}
@@ -165,6 +166,7 @@ const handleCheckout = async () => {
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[1].imagem)}></img>
                         <div className = 'itemCartName' >{cart[1].nome}</div>
+                        <div className = 'itemCartName' >{ cart[0].quantity}</div>
                         <div className = 'itemCartPreco'>{'R$' +cart[1].price}</div>
                       </div>
                           )}})()}    
@@ -175,6 +177,7 @@ const handleCheckout = async () => {
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[2].imagem)  }></img>
                         <div className = 'itemCartName' >{cart[2].nome}</div>
+                        <div className = 'itemCartName' >{ cart[0].quantity}</div>
                         <div className = 'itemCartPreco'>{'R$' +cart[2].price}</div>
                       </div>
                           )}})()}
@@ -185,6 +188,7 @@ const handleCheckout = async () => {
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[3].imagem) }></img>
                         <div className = 'itemCartName' >{cart[3].nome}</div>
+                        <div className = 'itemCartName' >{ cart[0].quantity}</div>
                         <div className = 'itemCartPreco'>{'R$' +cart[3].price}</div>
                       </div>
                           )}})()}
@@ -195,12 +199,23 @@ const handleCheckout = async () => {
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[4].imagem)  }></img>
                         <div className = 'itemCartName' >{cart[4].nome}</div>
+                        <div className = 'itemCartName' >{ cart[0].quantity}</div>
                         <div className = 'itemCartPreco'>{'R$' +cart[4].price}</div>
                       </div>
-                       )}})()}   
+                       )}})()}
 
-                    <div className = 'removerItens' onClick = {() => {setCart([])}}>Remover Itens</div>                                 
-                      <button className = 'comprarStripe' type="button" onClick={handleCheckout}>Comprar com Stripe</button>            
+{(() => {
+                    if (typeof cart[0] !== 'undefined' && cart[4] !== null) {
+                       return ( 
+                         <div>
+               
+                        <div className = 'removerItens' onClick = {() => {setCart([])}}>Remover Itens</div>                                 
+                        <button className = 'comprarStripe' type="button" onClick={handleCheckout}>Comprar com Stripe</button> 
+                        </div> 
+                       )}})()}
+                         
+         
+ 
                     </div>
         </div> 
 

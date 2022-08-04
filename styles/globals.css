@@ -537,8 +537,8 @@ font-size: 18px;
   margin-top: 2%;
   height: 80%;
   float: left;
-
- 
+  background-size: 100% 100%;
+  background-image: url(../img/cartBackground.png);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
@@ -653,7 +653,8 @@ font-size: 23px;
   width: 1500px;
   margin-top: 2%;
   height: 600px;
-  margin-left: -100px;
+  margin-left: -30px;
+ 
 
  
 }
@@ -1152,6 +1153,8 @@ font-size: 23px;
     margin-top: 2%;
     height: 100%;
     float: left;
+    background-image: url(../img/cartBackground.png);
+    background-size: 100% 100%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
   
@@ -1787,9 +1790,9 @@ font-size: 23px;
   .cartBox{
     margin-left: 5%;
     width: 90%;
-  
+    background-size: 100% 100%;
     margin-top: 2%;
-
+    background-image: url(../img/cartBackground.png);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
   
@@ -2431,7 +2434,8 @@ font-size: 23px;
     width: 90%;
     margin-top:2%;
     height: 48%;
-    
+    background-size: 100% 100%;
+    background-image: url(../img/cartBackgroundCell.png);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
   
