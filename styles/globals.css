@@ -21,7 +21,7 @@
 }
 
 
-@media (min-width: 1350px){
+@media (min-width: 1350px){ 
 .headerPosition{
 
   height: 5vw;
@@ -195,7 +195,7 @@ h2{
 .produtosImg{
   
   width: 100%;
-  height: 40%;
+  height: 33%;
 
 }
 h3{
@@ -351,11 +351,9 @@ float: left;
   
 }
 .detalhesText{
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
 
   height: 80%;
-
-  
   margin-top:2%;
   width: 60%;
   float: left;
@@ -363,17 +361,20 @@ float: left;
 }
 .detalhesImgSize{
   width: 100%;
-  
-  height: 85%;
-   background-size: 100% 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  height: 89%;
+  margin-left: 10%;
+  background-size: 100% 100%;
   margin-top:0%;
   float: left;
   
   
 }
 .detalhesImgTittle{
-  width: 100%;
+  width: 80%;
+  
   height: 12%;
+  margin-left: 10%;
   margin-top: 15%;
   float: left;
   color: red;
@@ -389,11 +390,25 @@ float: left;
   margin-top: 2%;
   font-size: 22px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  width: 90%;
- 
+  width: 80%;
+  margin-left: 10%;
+
   float: left;
   height: 25%;
 
+}
+.detalhesPreco{
+  width: 80%;
+  margin-left: 10%;
+  height: 12%;
+  margin-top: 5%;
+
+  float: left;
+  color: red;
+ 
+  font-size:40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
 }
 
 
@@ -401,10 +416,10 @@ float: left;
 
 
 .detalhesTextComprar{
-  
-  width: 100%;
-  height: 6%;
-  margin-top: 3%;
+  margin-left: 10%;
+  width: 80%;
+  height: 10%;
+  margin-top: 5%;
   cursor: pointer;
   color: white;
   font-size: 22px;
@@ -412,19 +427,17 @@ float: left;
   font-weight: bolder;
   cursor: pointer;
   float: left;
- 
-
 }
 
 
 .carrinhoText{
   background-color: #2189ff;
   align-self: center;
-  height: 80%;
-  width: 30%;
+  height: 70%;
+  width: 50%;
   text-align: center;
   border-radius: 5px;
-  
+  margin-left: 0%;
 }
 
 .carrinhoText:hover{
@@ -454,10 +467,12 @@ float: left;
   display: block;
 }
 .quantidade{
-  width:60%;
-  height: 70%;
+  width:50%;
+  height: 100%;
   float: left;
   display: flex;
+ color: black;
+ margin-left: 8%;
   
 }
 .quantidadeText{
@@ -516,20 +531,6 @@ font-size: 18px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .cartBox{
   margin-left: 5%;
   width: 30%;
@@ -538,7 +539,7 @@ font-size: 18px;
   float: left;
 
  
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .cartProduct1{
@@ -657,11 +658,13 @@ font-size: 23px;
  
 }
 .conteudoProdutosBox{
-
-
-  height: 100%;
-  width: 50%;
-  float: right;
+  height: 80%;
+  margin-top: 10%;
+  margin-left: 5%;
+  background-color: #F0F8FF;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  width: 40%;
+  float:left;
   display: block;
 }
 
@@ -989,16 +992,17 @@ font-size: 23px;
     display: block;
   }
   .detalhesImg{
-    margin-top: 20%;
+    margin-top: 10%;
     width: 50%;
     height: 80%;
     float: left;
     display:inline-block;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     justify-content: center;
     
   }
   .detalhesText{
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    
     
     height: 100%;
    
@@ -1009,16 +1013,16 @@ font-size: 23px;
   }
   .detalhesImgSize{
     width: 100%;
-    
-    height: 70%;
+    margin-top: 10%;
+    height: 80%;
    
-    margin-top:0%;
+ 
     float: left;
     
     
   }
   .detalhesImgTittle{
-    width: 100%;
+    width: 80%;
     color: red;
     height: 10%;
     margin-top: 20%;
@@ -1026,12 +1030,26 @@ font-size: 23px;
     font-size:30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bolder;
+    margin-left: 10%;
+  }
+  .detalhesPreco{
+    margin-top: 8%;
+    width: 80%;
+    color: red;
+    height: 10%;
+    float: left;
+    font-size:30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    margin-left: 10%;
+    padding-bottom: 20%;
   }
   .detalhesTextDetails{
     margin-top: 6%;
     font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 90%;
+    width: 80%;
+    margin-left: 10%;
     float: left;
     
    
@@ -1043,10 +1061,10 @@ font-size: 23px;
   
   
   .detalhesTextComprar{
+
     margin-left: 1%;
     width: 100%;
-    height: 6%;
-    margin-top: 130%;
+    height: 10%;
     cursor: pointer;
     color: white;
     font-size: 18px;
@@ -1055,22 +1073,27 @@ font-size: 23px;
     cursor: pointer;
     border-radius: 10px;
    
+
   
   }
   
   .carrinhoText{
     background-color: #2189ff;
     align-self: center;
-    height: 70%;
+    height: 60%;
     font-size: 20px;
-    width: 45%;
+    width: 35%;
     float: left;
-    margin-left: -10px;
+    margin-left: 8%;
+
     text-align: center;
     border-radius: 5px;
     
   }
-  
+  .carrinhoText:hover{
+   transform: scale(1.2);
+   transition: 0.5s;
+  }
   
   
   .multiD{
@@ -1084,19 +1107,13 @@ font-size: 23px;
     float: left;
   }
   
-  .quantidadeComprarBox{
-    width: 100%;
-    margin-top: 5%;
-   
-   float: left;
-    height: 10%;
-   
-    display: block;
-  }
+
   .quantidade{
-    margin-top: 5%;
-    width:80%;
-    height: 80%;
+    
+
+    width:35%;
+   margin-left: 10%;
+    height: 100%;
     float: left;
     display: flex;
     
@@ -1123,7 +1140,7 @@ font-size: 23px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     cursor: pointer;
     font-size: 23px;
-    width: 20%;
+    width: 40%;
     
     display: flex;
     justify-content: center;
@@ -1137,7 +1154,7 @@ font-size: 23px;
     float: left;
   
    
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
   
   .cartProduct1{
@@ -1248,11 +1265,13 @@ font-size: 23px;
   }
   .conteudoProdutosBox{
 
-
-    height: 100%;
+    margin-top: 10%;
+    height: 80%;
     width: 50%;
     float: right;
     display: block;
+    background-color: #F0F8FF;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   }
   
   .produtosdoisbox1{
