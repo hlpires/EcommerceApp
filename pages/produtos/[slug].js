@@ -199,10 +199,9 @@ const handleCheckout = async () => {
                       </div>
                        )}})()}   
 
-                    <div className = 'removerItens' onClick = {() => {setCart([])}}><h6>Remover Itens</h6></div>
-                                  
+                    <div className = 'removerItens' onClick = {() => {setCart([])}}>Remover Itens</div>                                 
                       <button className = 'comprarStripe' type="button" onClick={handleCheckout}>Comprar com Stripe</button>            
-                      </div>
+                    </div>
         </div> 
 
       </div>
