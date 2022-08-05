@@ -409,20 +409,36 @@ float: left;
 
 }
 .detalhesPreco{
-  width: 80%;
-  margin-left: 10%;
-  height: 12%;
-  margin-top: 5%;
-
-  float: left;
-  color: red;
+  text-align: center;
+  width: 100%;
  
+  height: 12%;
+  margin-top: 10%;
+  float: left;
+  color: black;
   font-size:40px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bolder;
+  justify-content: center;
+  display: flex;
+  
 }
 
+.dinheiro{
+  margin-top: 3%;
+  height: 20px!important;
+  margin-left: -5%;
 
+  font-size: 20px;
+ 
+}
+.dinheiro1{
+  margin-top: 7%;
+  height: 10px!important;
+  font-size: 12px;
+  
+ 
+}
 
 
 
@@ -449,8 +465,8 @@ float: left;
   width: 50%;
   text-align: center;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin-left: 0%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  margin-left: -1%;
   background-color: red;
   background-image: url(../img/addCarrinho.png);
   background-size: 100% 100%;
@@ -627,7 +643,8 @@ display: flex;
   font-weight: bolder;
   text-align: center;
   align-self: center;
-  width: 40%;
+  width: 27%;
+ 
   
 }
 
@@ -1065,16 +1082,36 @@ font-size: 23px;
     font-weight: bolder;
     margin-left: 10%;
   }
+  .dinheiro{
+    margin-top: 3%;
+    height: 20px!important;
+    margin-left: -5%;
+  
+    font-size: 20px;
+   
+  }
+  .dinheiro1{
+    margin-top: 7%;
+    height: 10px!important;
+    font-size: 12px;
+    
+   
+  }
+
+
   .detalhesPreco{
     margin-top: 8%;
-    width: 80%;
-    color: red;
+    width: 100%;
+    color: black;
+    
+    display: flex;
+    justify-content: center;
     height: 10%;
     float: left;
     font-size:30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bolder;
-    margin-left: 10%;
+    
     padding-bottom: 20%;
   }
   .detalhesTextDetails{
@@ -1258,8 +1295,8 @@ font-size: 23px;
     font-weight: bolder;
     text-align: center;
     align-self: center;
-    width: 40%;
-    
+    width: 59%;
+
   }
   
   .removerItens{
@@ -1731,13 +1768,28 @@ font-size: 23px;
     
     width: 80%;
     margin-left:10%;
-    color: red;
+    display: flex;
+    justify-content: center;
     height: 10%;
-    margin-top: 0%;
+    margin-top: 10%;
     float: left;
     font-size:30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bolder;
+  }
+
+  .dinheiro{
+    margin-top: 2%;
+    height: 15px!important;
+    margin-left: -5%;
+  
+    font-size: 16px;
+   
+  }
+  .dinheiro1{
+    margin-top: 5%;
+    height: 10px!important;
+    font-size: 12px;
   }
   .detalhesTextDetails{
     margin-top: 5%;
@@ -1905,7 +1957,7 @@ font-size: 23px;
     font-weight: bolder;
     text-align: center;
     align-self: center;
-    width: 40%;
+    width: 15%;
     
   }
   
@@ -2324,7 +2376,7 @@ font-size: 23px;
   }
   .positionDetalhes{
   width: 1500px;
-  height:1400px;
+  height:1600px;
   
   float: left;
   }
@@ -2349,7 +2401,7 @@ font-size: 23px;
   }
   .detalhesText{
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    height: 50%;
+    height: 48%;
     margin-top:5%;
     width: 90%;
     margin-left: 5%;
@@ -2383,11 +2435,29 @@ font-size: 23px;
     text-align: center;
     height: 2%;
     float: left;
-    font-size:22px;
+    font-size:30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bolder;
     color: black;
+    display: flex;
+    justify-content: center;
   }
+  .dinheiro{
+    margin-top: 1.6%;
+    height: 15px!important;
+    margin-left: -5%;
+  
+    font-size: 14px;
+   
+  }
+  .dinheiro1{
+    margin-top: 5%;
+    height: 10px!important;
+    font-size: 12px;
+  }
+  
+
+
     .detalhesTextDetails{
       text-align: center;
       font-size: 22px;
@@ -2415,10 +2485,10 @@ font-size: 23px;
     cursor: pointer;
     float: left;
     border-radius: 5px;
+    justify-content: center;
     
-  
   }
-  
+
   .carrinhoText{
     background-color: red;
     align-self: center;
@@ -2430,6 +2500,8 @@ font-size: 23px;
     background-size: 100%  100%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
+
+  
   
   
   
@@ -2520,7 +2592,7 @@ font-size: 23px;
   margin-top:4%;
   width: 80%;
   margin-left: 10%;
-  height: 90px;
+  height: 105px;
   border-bottom: 0.5px solid grey;
   display: flex;
   }

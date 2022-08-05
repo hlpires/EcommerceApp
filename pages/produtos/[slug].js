@@ -129,7 +129,7 @@ const handleCheckout = async () => {
             <div className = 'conteudoProdutosBox'>
             <div className = 'detalhesImgTittle' >{produtos.produtos[set].nome}</div>
             <div className = 'detalhesTextDetails'>{produtos.produtos[set].detalhes}</div>
-            <div className = 'detalhesPreco' >Preço R$:{produtos.produtos[set].preco}</div>   
+            <div className = 'detalhesPreco' > <p className = 'dinheiro'>R$:</p>{produtos.produtos[set].preco}</div>   
             <div className = 'detalhesTextComprar' >
               <p className = 'carrinhoText' onClick = {calcular}></p>
               <div className = 'quantidade'>
@@ -156,7 +156,7 @@ const handleCheckout = async () => {
                         <img className = 'itemCartImg' src = {urlFor (cart[0].imagem)  }></img>
                         <div className = 'itemCartName' >{cart[0].nome}</div>
                         <div className = 'itemCartName' >{ cart[0].quantity}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart[0].price}</div>
+                        <div className = 'itemCartPreco'><p className = 'dinheiro1'>R$:</p>{cart[0].price}</div>
                       </div>
                           )}})()}
               
@@ -167,7 +167,7 @@ const handleCheckout = async () => {
                         <img className = 'itemCartImg' src = {urlFor (cart[1].imagem)}></img>
                         <div className = 'itemCartName' >{cart[1].nome}</div>
                         <div className = 'itemCartName' >{ cart[0].quantity}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart[1].price}</div>
+                        <div className = 'itemCartPreco'><p className = 'dinheiro1'>R$:</p>{cart[1].price}</div>
                       </div>
                           )}})()}    
 
@@ -178,7 +178,7 @@ const handleCheckout = async () => {
                         <img className = 'itemCartImg' src = {urlFor (cart[2].imagem)  }></img>
                         <div className = 'itemCartName' >{cart[2].nome}</div>
                         <div className = 'itemCartName' >{ cart[0].quantity}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart[2].price}</div>
+                        <div className = 'itemCartPreco'><p className = 'dinheiro1'>R$:</p>{cart[2].price}</div>
                       </div>
                           )}})()}
 
@@ -189,7 +189,7 @@ const handleCheckout = async () => {
                         <img className = 'itemCartImg' src = {urlFor (cart[3].imagem) }></img>
                         <div className = 'itemCartName' >{cart[3].nome}</div>
                         <div className = 'itemCartName' >{ cart[0].quantity}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart[3].price}</div>
+                        <div className = 'itemCartPreco'><p className = 'dinheiro1'>R$:</p>{cart[3].price}</div>
                       </div>
                           )}})()}
 
@@ -200,7 +200,7 @@ const handleCheckout = async () => {
                         <img className = 'itemCartImg' src = {urlFor (cart[4].imagem)  }></img>
                         <div className = 'itemCartName' >{cart[4].nome}</div>
                         <div className = 'itemCartName' >{ cart[0].quantity}</div>
-                        <div className = 'itemCartPreco'>{'R$' +cart[4].price}</div>
+                        <div className = 'itemCartPreco'><p className = 'dinheiro1'>R$:</p>{cart[4].price}</div>
                       </div>
                        )}})()}
 
