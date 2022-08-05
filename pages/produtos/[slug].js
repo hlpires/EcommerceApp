@@ -4,7 +4,7 @@ import {client} from '../../lib/client'
 import {urlFor} from '../../lib/client'
 import {useRouter} from 'next/router'
 import getStripe from '../../lib/getStripe';
-import Link from 'next/link'
+import {Toaster,toast} from 'react-hot-toast'
 
 
 const DetalhesProdutos = (produtos) => {
@@ -84,7 +84,7 @@ const mudarStyle = {
 
   
 const handleCheckout = async () => {
-    
+  toast('Redirecionando para o pagamento')
   const stripe = await getStripe();
   
 
@@ -238,12 +238,14 @@ const handleCheckout = async () => {
             </div>
        
     </div>
+    <Toaster/>
 
 
     
 
 
     </div>
+    
   )
 }
 
