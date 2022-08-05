@@ -708,7 +708,7 @@ font-size: 23px;
 
 }
 
-@media (min-width: 900px) and (max-width:1349px){
+@media (min-width: 1001px) and (max-width:1349px){
   .headerPosition{
 
     height: 5vw;
@@ -1379,7 +1379,7 @@ font-size: 23px;
   }
 }
 
-@media (min-width: 501px) and (max-width:899px){
+@media (min-width: 601px) and (max-width:1000px){
   .headerPosition{
 
     height: 10vw;
@@ -2041,7 +2041,7 @@ font-size: 23px;
     transition: 0.5s;
   }
 }
-@media(max-width:500px){
+@media(max-width:600px){
   .headerPosition{
 
     height: 15vw;
