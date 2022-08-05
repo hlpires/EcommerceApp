@@ -2476,7 +2476,7 @@ font-size: 23px;
     width: 80%;
     height: 12%;
     margin-left: 10%;
-    margin-top: 10%;
+    margin-top: 14%;
     cursor: pointer;
     color: white;
     justify-content: center;
@@ -2518,11 +2518,11 @@ font-size: 23px;
   
 
   .quantidade{
-    width:40%;
-
+    width:48%;
+  
     height: 100%;
     float: left;
-    margin-left: 8%;
+    margin-left: 10%;
   
     
   }
