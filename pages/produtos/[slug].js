@@ -15,6 +15,7 @@ const DetalhesProdutos = (produtos) => {
 
 const [qty, setQty] = useState(1);
 const [cart, setCart] = useState([]);
+
  
 const incQty = () => { 
 setQty((prevQty) => prevQty + 1);
@@ -46,13 +47,15 @@ const {
 query:{value}} = router
 
 const set = parseInt(value)
+const [product,setProduct] = useState(set)
+
 
 const calcular = () => {
 let updatedValue = {};
-updatedValue = {nome:produtos.produtos[set].nome,
-price:produtos.produtos[set].preco * qty,
+updatedValue = {nome:produtos.produtos[product].nome,
+price:produtos.produtos[product].preco * qty,
 quantity:qty,
-imagem:produtos.produtos[set].imagem?.[0].asset._ref};
+imagem:produtos.produtos[product].imagem?.[0].asset._ref};
 
 
 setCart((prevState) => ([
@@ -70,7 +73,6 @@ console.log(cart)
 
 
 const [estado, setEstado] = useState('none');
-
 
 
 const mudarStyle = {
@@ -124,12 +126,12 @@ const handleCheckout = async () => {
           <div className='detalhesText'>
           <div className='detalhesImg'>
             
-            <img className = 'detalhesImgSize' src = {urlFor(produtos.produtos[set].imagem?.[0].asset._ref)}></img>
+            <img className = 'detalhesImgSize' src = {urlFor(produtos.produtos[product].imagem?.[0].asset._ref)}></img>
           </div>
             <div className = 'conteudoProdutosBox'>
-            <div className = 'detalhesImgTittle' >{produtos.produtos[set].nome}</div>
-            <div className = 'detalhesTextDetails'>{produtos.produtos[set].detalhes}</div>
-            <div className = 'detalhesPreco' > <p className = 'dinheiro'>R$:</p>{produtos.produtos[set].preco}</div>   
+            <div className = 'detalhesImgTittle' >{produtos.produtos[product].nome}</div>
+            <div className = 'detalhesTextDetails'>{produtos.produtos[product].detalhes}</div>
+            <div className = 'detalhesPreco' > <p className = 'dinheiro'>R$:</p>{produtos.produtos[product].preco}</div>   
             <div className = 'detalhesTextComprar' >
               <p className = 'carrinhoText' onClick = {calcular}></p>
               <div className = 'quantidade'>
@@ -225,14 +227,14 @@ const handleCheckout = async () => {
       <div className ='produtosdois'>
         
             <div className ='produtosdoisbox1'>
-            <div className = 'produtosdoisItem' > <Link href ='/'><a><img className='produtosDoisImg' src={urlFor(produtos.produtos[2].imagem?.[0])} alt="" /></a></Link></div>
-            <div className = 'produtosdoisItem' > <Link href ='/'><a><img className='produtosDoisImg' src={urlFor(produtos.produtos[0].imagem?.[0])} alt="" /></a></Link></div>
-              <div className = 'produtosdoisItem' > <Link href ='/'><a><img className='produtosDoisImg' src={urlFor(produtos.produtos[3].imagem?.[0])} alt="" /></a></Link></div>
-             <div className = 'produtosdoisItem' > <Link href ='/'><a><img className='produtosDoisImg' src={urlFor(produtos.produtos[4].imagem?.[0])} alt="" /></a></Link></div>
-             <div className = 'produtosdoisItem' ><Link href ='/'><a><img className='produtosDoisImg' src={urlFor(produtos.produtos[5].imagem?.[0])} alt="" /></a></Link></div>
-              <div className = 'produtosdoisItem' ><Link href ='/'><a> <img className='produtosDoisImg' src={urlFor(produtos.produtos[6].imagem?.[0])} alt="" /></a></Link></div>
-             <div className = 'produtosdoisItem' ><Link href ='/'><a> <img className='produtosDoisImg' src={urlFor(produtos.produtos[8].imagem?.[0])} alt="" /></a></Link></div>
-             <div className = 'produtosdoisItem'><Link href ='/'><a> <img className='produtosDoisImg' src={urlFor(produtos.produtos[9].imagem?.[0])} alt="" /></a></Link></div>
+            <div className = 'produtosdoisItem' ><img className='produtosDoisImg' onClick = {() => {setProduct(2)}} src={urlFor(produtos.produtos[2].imagem?.[0])} alt="" /></div>
+            <div className = 'produtosdoisItem' ><img className='produtosDoisImg' onClick = {() => {setProduct(0)}} src={urlFor(produtos.produtos[0].imagem?.[0])} alt="" /></div>
+              <div className = 'produtosdoisItem' ><img className='produtosDoisImg' onClick = {() => {setProduct(3)}} src={urlFor(produtos.produtos[3].imagem?.[0])} alt="" /></div>
+             <div className = 'produtosdoisItem' > <img className='produtosDoisImg' onClick = {() => {setProduct(4)}} src={urlFor(produtos.produtos[4].imagem?.[0])} alt="" /></div>
+             <div className = 'produtosdoisItem' ><img className='produtosDoisImg' onClick = {() => {setProduct(5)}} src={urlFor(produtos.produtos[5].imagem?.[0])} alt="" /></div>
+              <div className = 'produtosdoisItem' > <img className='produtosDoisImg' onClick = {() => {setProduct(6)}} src={urlFor(produtos.produtos[6].imagem?.[0])} alt="" /></div>
+             <div className = 'produtosdoisItem' > <img className='produtosDoisImg' onClick = {() => {setProduct(8)}} src={urlFor(produtos.produtos[8].imagem?.[0])} alt="" /></div>
+             <div className = 'produtosdoisItem'><img className='produtosDoisImg' onClick = {() => {setProduct(9)}} src={urlFor(produtos.produtos[9].imagem?.[0])} alt="" /></div>
             </div>
        
     </div>
