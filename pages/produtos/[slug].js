@@ -131,11 +131,11 @@ const handleCheckout = async () => {
             <div className = 'detalhesTextDetails'>{produtos.produtos[set].detalhes}</div>
             <div className = 'detalhesPreco' >Preço R$:{produtos.produtos[set].preco}</div>   
             <div className = 'detalhesTextComprar' >
-              <p className = 'carrinhoText' onClick = {calcular}>Carrinho</p>
+              <p className = 'carrinhoText' onClick = {calcular}></p>
               <div className = 'quantidade'>
               
               <div className = 'quantidadeItem' id = 'quantidademais' onClick = {incQty}></div>
-              <div className = 'quantidadeItem'><span className = 'count'>{qty}</span></div>
+              <span className = 'count'>{qty}</span>
               
               <div className = 'quantidadeItem' id = 'quantidademenos' onClick = {decQty}></div>
 

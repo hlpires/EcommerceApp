@@ -417,8 +417,8 @@ float: left;
 
 .detalhesTextComprar{
   margin-left: 10%;
-  width: 80%;
-  height: 10%;
+  width: 100%;
+  height: 15%;
   margin-top: 5%;
   cursor: pointer;
   color: white;
@@ -431,13 +431,19 @@ float: left;
 
 
 .carrinhoText{
-  background-color: #2189ff;
+  
+  padding: 20px;
   align-self: center;
   height: 70%;
   width: 50%;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-left: 0%;
+  background-color: red;
+  background-image: url(../img/addCarrinho.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .carrinhoText:hover{
@@ -467,13 +473,14 @@ float: left;
   display: block;
 }
 .quantidade{
-  width:50%;
-  height: 100%;
+  width:30%;
+  margin-top: 4%;
+  height: 60%;
   float: left;
   display: flex;
  color: black;
- margin-left: 8%;
-  
+ margin-left: 4%;
+ 
 }
 .quantidadeText{
 font-weight: bolder;
@@ -496,16 +503,18 @@ font-size: 18px;
   cursor: pointer ;
   font-size: 23px;
   width: 100%;
-  
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   display: flex;
   justify-content: center;
-
+  border-radius:5px;
 }
 .count{
   color: #163342;
-
-  font-size: 30px;
-  height: 85%;
+  width: 120px;
+  text-align: center;
+  
+  font-size: 35px;
+  height: 80%;
   align-self: center;
 }
 #quantidademais{
@@ -1079,20 +1088,24 @@ font-size: 23px;
   }
   
   .carrinhoText{
-    background-color: #2189ff;
+    background-color: red;
+    background-image: url(../img/addCarrinho.png);
+    background-size: 100% 100%;
     align-self: center;
-    height: 60%;
+    height: 100%;
+    background-repeat: no-repeat;
     font-size: 20px;
-    width: 35%;
+    width: 45%;
     float: left;
     margin-left: 8%;
-
     text-align: center;
     border-radius: 5px;
-    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
+
+
   .carrinhoText:hover{
-   transform: scale(1.2);
+   transform: scale(1.1);
    transition: 0.5s;
   }
   
@@ -1110,10 +1123,8 @@ font-size: 23px;
   
 
   .quantidade{
-    
-
     width:35%;
-   margin-left: 10%;
+   margin-left: 5%;
     height: 100%;
     float: left;
     display: flex;
@@ -1142,7 +1153,7 @@ font-size: 23px;
     cursor: pointer;
     font-size: 23px;
     width: 40%;
-    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     display: flex;
     justify-content: center;
   
@@ -1156,6 +1167,7 @@ font-size: 23px;
     background-image: url(../img/cartBackground.png);
     background-size: 100% 100%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
   }
   
   .cartProduct1{
@@ -1281,7 +1293,8 @@ font-size: 23px;
   }
   .count{
     color: #163342;
-  
+    text-align: center;
+    width: 50px;
     font-size: 30px;
     height: 85%;
     align-self: center;
@@ -1306,7 +1319,7 @@ font-size: 23px;
   }
 }
 
-@media (min-width: 600px) and (max-width:899px){
+@media (min-width: 501px) and (max-width:899px){
   .headerPosition{
 
     height: 10vw;
@@ -1567,7 +1580,7 @@ font-size: 23px;
   }
   .produtosdois{
     
-    height: 1000px;
+    height: 2000px;
       display: flex;
      justify-content: center;
     
@@ -1583,7 +1596,7 @@ font-size: 23px;
   .produtosdoisItem{
     width: 38%;
     margin-top: 10%;
-    height: 25%;
+    height: 18%;
     cursor: pointer;
     margin-left:8%;
     background-color: #f7f7f7;
@@ -1728,16 +1741,24 @@ font-size: 23px;
   }
   
   .carrinhoText{
-    background-color: #2189ff;
+    background-color: red;
     align-self: center;
-    height: 60%;
+    height: 100%;
     width: 140px;
     text-align: center;
     border-radius: 5px;
     margin-left:-2%;
+    background-image: url(../img/addCarrinho.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     
   }
-  
+  .carrinhoText:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+
+  }
   
   
   .multiD{
@@ -1775,21 +1796,21 @@ font-size: 23px;
   
   .quantidadeItem{
     float: left;
-    margin-top: 5%;
     
-    
-    height: 90%;
+    height: 120%;
     font-weight: bolder;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 23px;
     width: 100%;
     display: flex;
     justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   
   }
   .cartBox{
     margin-left: 5%;
     width: 90%;
+    height: 60%;
     background-size: 100% 100%;
     margin-top: 2%;
     background-image: url(../img/cartBackground.png);
@@ -1828,7 +1849,7 @@ font-size: 23px;
   margin-top:4%;
   width: 80%;
   margin-left: 10%;
-  height: 14%;
+  height: 13%;
   
   border-bottom: 0.5px solid grey;
   display: flex;
@@ -1897,10 +1918,9 @@ font-size: 23px;
     border-radius: 10px;
     border: none;
   }
-
+  
   .produtosdoisbox1{
-    
-    padding-top: 100px;
+    height: 2000px;
     
   }
 
@@ -1918,10 +1938,9 @@ font-size: 23px;
 
   .count{
     color: #163342;
-
-  
     font-size: 30px;
-   
+    width: 100px;
+    text-align: center;
     align-self: center;
   }
   #quantidademais{
@@ -1943,7 +1962,7 @@ font-size: 23px;
     transition: 0.5s;
   }
 }
-@media(max-width:599px){
+@media(max-width:500px){
   .headerPosition{
 
     height: 15vw;
@@ -2278,14 +2297,14 @@ font-size: 23px;
   }
   .positionDetalhes{
   width: 1500px;
-  height:1800px;
+  height:1400px;
   
   float: left;
   }
   .detalhesBox{
     margin-top: 2%;
 
-  
+    
     width: 100%;
     height: 100%;
     display: block;
@@ -2332,15 +2351,15 @@ font-size: 23px;
 
 
   .detalhesPreco{
+    margin-top: 1%;
     width: 100%;
     text-align: center;
     height: 2%;
-   
     float: left;
-    font-size:28px;
+    font-size:22px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bolder;
-    color: red;
+    color: black;
   }
     .detalhesTextDetails{
       text-align: center;
@@ -2374,13 +2393,15 @@ font-size: 23px;
   }
   
   .carrinhoText{
-    background-color: #2189ff;
+    background-color: red;
     align-self: center;
-    height: 80%;
+    height: 100%;
     width: 160px;
     text-align: center;
     border-radius: 5px;
-    
+    background-image: url(../img/addCarrinho.png);
+    background-size: 100%  100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
   
   
@@ -2398,12 +2419,12 @@ font-size: 23px;
   
 
   .quantidade{
-    width:30%;
-    margin-top: 0.5%;
-    height: 80%;
+    width:40%;
+
+    height: 100%;
     float: left;
     margin-left: 8%;
-    
+  
     
   }
   .quantidadeText{
@@ -2434,11 +2455,12 @@ font-size: 23px;
     width: 90%;
     margin-top:2%;
     height: 48%;
+    
     background-size: 100% 100%;
     background-image: url(../img/cartBackgroundCell.png);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
-  
+
   .cartProduct1{
     width: 50%;
     display: flex;
@@ -2471,7 +2493,7 @@ font-size: 23px;
   margin-top:4%;
   width: 80%;
   margin-left: 10%;
-  height: 80px;
+  height: 90px;
   border-bottom: 0.5px solid grey;
   display: flex;
   }
@@ -2571,9 +2593,10 @@ font-size: 23px;
   }
   .count{
     color: #163342;
-  
-    font-size: 30px;
-    height: 85%;
+    float: left;
+    text-align: center;
+    width: 40px;
+    font-size: 33px;
     align-self: center;
   }
   #quantidademais{
