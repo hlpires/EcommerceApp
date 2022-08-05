@@ -651,20 +651,25 @@ display: flex;
 .removerItens{
   margin-left: 20%;
   width: 60%;
-  height: 5%;
+
   margin-top: 10px;
   cursor: pointer;
   text-align: center;
   background-color: red;
   color: white;
-  font-size: 22px;
+  font-size: 24px;
   justify-content: center;
   display: fixed;
   font-weight: bolder;
   cursor: pointer;
   float: left;
   border-radius: 10px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 
+}
+.removerItens:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 h6{
 font-size: 23px;
@@ -684,8 +689,15 @@ font-size: 23px;
   font-weight: bolder;
   border-radius: 10px;
   border: none;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   
 }
+
+.comprarStripe:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
 .produtosdoisbox1{
   width: 1500px;
   margin-top: 2%;
@@ -1317,6 +1329,11 @@ font-size: 23px;
     cursor: pointer;
     float: left;
     border-radius: 5px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+  .removerItens:hover{
+    transform:scale(1.1);
+    transition:0.5s
   }
     h6{
       font-size: 22px;
@@ -1335,6 +1352,12 @@ font-size: 23px;
     justify-content: center;
     font-weight: bolder;
     border-radius: 5px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+  
+  .comprarStripe:hover{
+    transform:scale(1.1);
+    transition:0.5s
   }
   .conteudoProdutosBox{
 
@@ -1966,17 +1989,18 @@ font-size: 23px;
     width: 60%;
     height: 60px;
 
-    margin-top: 6%;
+    margin-top: 3%;
     margin-bottom: 2%;
     cursor: pointer;
     background-color: red;
     color: white;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     justify-content: center;
     font-weight: bolder;
     border-radius: 10px;
     border: none;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   }
   
   .comprarStripe{
@@ -1984,14 +2008,14 @@ font-size: 23px;
     width: 60%;
     height: 60px;
     margin-bottom: 2%;
-
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     margin-top: 0%;
 
     cursor: pointer;
     background-color: red;
     color: white;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     justify-content: center;
     font-weight: bolder;
     border-radius: 10px;
@@ -2629,7 +2653,6 @@ font-size: 23px;
     width: 60%;
     height: 40px;
     margin-top: 6%;
-    
     cursor: pointer;
     text-align: center;
     background-color: red;
@@ -2641,7 +2664,8 @@ font-size: 23px;
     font-weight: bolder;
     cursor: pointer;
     float: left;
-    border-radius: 2px;
+    border-radius: 10px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   }
  h6{
    
@@ -2653,7 +2677,7 @@ font-size: 23px;
     margin-left: 20%;
     width: 60%;
     height: 40px;
-
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     margin-top: 6%;
     margin-bottom: 6%;
     cursor: pointer;
@@ -2663,7 +2687,7 @@ font-size: 23px;
     font-size: 20px;
     justify-content: center;
     font-weight: bolder;
-    border-radius: 2px;
+    border-radius: 10px;
     border: none;
   }
   .produtosdoisbox1{
