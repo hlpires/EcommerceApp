@@ -48,9 +48,11 @@ query:{value}} = router
 
 const set = parseInt(value)
 const [product,setProduct] = useState(set)
-
+const [quantidade,setQuantidade] = useState([])
 
 const calcular = () => {
+
+
 let updatedValue = {};
 updatedValue = {nome:produtos.produtos[product].nome,
 price:produtos.produtos[product].preco * qty,
@@ -65,11 +67,11 @@ updatedValue,
 ]));
 
 
-console.log(cart)
+
 
 }
 
-
+console.log(cart)
 
 
 const [estado, setEstado] = useState('none');
@@ -168,7 +170,7 @@ const handleCheckout = async () => {
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[1].imagem)}></img>
                         <div className = 'itemCartName' >{cart[1].nome}</div>
-                        <div className = 'itemCartName' >{ cart[0].quantity}</div>
+                        <div className = 'itemCartName' >{ cart[1].quantity}</div>
                         <div className = 'itemCartPreco'><p className = 'dinheiro1'>R$:</p>{cart[1].price}</div>
                       </div>
                           )}})()}    
@@ -179,7 +181,7 @@ const handleCheckout = async () => {
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[2].imagem)  }></img>
                         <div className = 'itemCartName' >{cart[2].nome}</div>
-                        <div className = 'itemCartName' >{ cart[0].quantity}</div>
+                        <div className = 'itemCartName' >{cart[2].quantity}</div>
                         <div className = 'itemCartPreco'><p className = 'dinheiro1'>R$:</p>{cart[2].price}</div>
                       </div>
                           )}})()}
@@ -190,7 +192,7 @@ const handleCheckout = async () => {
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[3].imagem) }></img>
                         <div className = 'itemCartName' >{cart[3].nome}</div>
-                        <div className = 'itemCartName' >{ cart[0].quantity}</div>
+                        <div className = 'itemCartName' >{ cart[3].quantity}</div>
                         <div className = 'itemCartPreco'><p className = 'dinheiro1'>R$:</p>{cart[3].price}</div>
                       </div>
                           )}})()}
@@ -201,7 +203,7 @@ const handleCheckout = async () => {
                         <div className = 'itemCartBox'>
                         <img className = 'itemCartImg' src = {urlFor (cart[4].imagem)  }></img>
                         <div className = 'itemCartName' >{cart[4].nome}</div>
-                        <div className = 'itemCartName' >{ cart[0].quantity}</div>
+                        <div className = 'itemCartName' >{ cart[4].quantity}</div>
                         <div className = 'itemCartPreco'><p className = 'dinheiro1'>R$:</p>{cart[4].price}</div>
                       </div>
                        )}})()}
